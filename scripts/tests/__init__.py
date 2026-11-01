@@ -1,1 +1,1 @@
-# Tests for build_epub module
+# Tests for the doc-tooling scripts

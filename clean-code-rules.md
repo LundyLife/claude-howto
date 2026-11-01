@@ -108,8 +108,6 @@ These rules guide code generation to produce maintainable, professional-quality 
 **Core Philosophy**: Code is read 10x more than written. Optimize for readability and maintainability, not cleverness.
 
 ---
-**Last Updated**: August 4, 2026
-**Claude Code Version**: 2.1.220
-**Sources**:
-- https://code.claude.com/docs/en/overview
-**Compatible Models**: Claude Fable 5, Claude Opus 5, Claude Sonnet 5, Claude Sonnet 4.6, Claude Opus 4.8, Claude Haiku 4.5
+**Last updated:** 2026-10-30
+**Checked against:** Kiro Crew public source @ 2808e9478c (github.com/kirodotdev/KiroCrew) and kiro.dev/docs/cli
+*Part of the [Kiro Crew How To](README.md) guide.*

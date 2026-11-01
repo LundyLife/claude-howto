@@ -1,6 +1,6 @@
 ---
 name: Question
-about: Ask a question about Claude Code or this guide
+about: Ask a question about Kiro Crew or this guide
 title: "[QUESTION] "
 labels: question
 assignees: ''
@@ -18,16 +18,16 @@ Provide some background or context for your question:
 
 ## Relevant Topic
 Which topic is this related to?
-- [ ] Slash Commands
-- [ ] Memory
-- [ ] Skills
-- [ ] Subagents
-- [ ] MCP Protocol
-- [ ] Hooks
-- [ ] Plugins
-- [ ] Checkpoints
-- [ ] Advanced Features
-- [ ] CLI Reference
+- [ ] 01 Getting started
+- [ ] 02 Slash commands and saved prompts
+- [ ] 03 Memory, lessons and steering
+- [ ] 04 Skills
+- [ ] 05 Custom agents and subagents
+- [ ] 06 Connections (MCP servers)
+- [ ] 07 Hooks and safety
+- [ ] 08 Sessions, checkpoints and undo
+- [ ] 09 Planning, schedules and long jobs
+- [ ] 10 Apps, channels, remote use and the CLI
 - [ ] Other
 
 ## What You've Tried

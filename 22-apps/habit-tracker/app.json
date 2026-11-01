@@ -1,0 +1,35 @@
+{
+  "name": "habit-tracker",
+  "version": "0.1.0",
+  "displayName": "Habit Tracker",
+  "description": "List a few daily habits, get help choosing a new one, and get a reminder each morning.",
+  "author": "Your Name",
+  "iconPath": "assets/icon.png",
+  "skills": [
+    "skills/add-habit"
+  ],
+  "tags": [
+    "example"
+  ],
+  "ui": {
+    "entry": "dist/index.mjs",
+    "pages": [
+      {
+        "route": "/apps/habit-tracker",
+        "label": "Habit Tracker",
+        "icon": "Package"
+      }
+    ]
+  },
+  "crons": [
+    {
+      "name": "habit-tracker-morning-reminder",
+      "cron_expr": "0 8 * * *",
+      "timezone": "America/New_York",
+      "message": "Remind me, in one friendly line, to open the Habit Tracker page and tick off today's habits."
+    }
+  ],
+  "permissions": {
+    "cron": true
+  }
+}

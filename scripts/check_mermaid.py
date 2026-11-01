@@ -2,7 +2,7 @@
 """Validate Mermaid diagram syntax in Markdown files by rendering them with Pele.
 
 Every ```mermaid block under the current directory is rendered with the same
-pinned, sha256-verified Pele bundle that the website and the EPUB use, so a
+pinned, sha256-verified Pele bundle that the website uses, so a
 block that passes here renders there too. Identical blocks are rendered once.
 
 Strict mode (``--strict``, or ``PELE_REQUIRED`` / ``CI`` set to 1/true/yes)

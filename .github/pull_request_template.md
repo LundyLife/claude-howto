@@ -25,7 +25,8 @@ What should reviewers focus on?
 
 ## Testing
 How have you tested this?
-- [ ] Tested locally with Claude Code
+- [ ] Checked every command against the public Kiro Crew source or kiro.dev docs
+- [ ] Tried it with Kiro Crew / kiro-cli (versions: `kirocrew --version`, `kiro-cli --version`)
 - [ ] Verified examples work
 - [ ] Checked links and references
 - [ ] Reviewed for typos and clarity
@@ -35,14 +36,16 @@ How have you tested this?
 - [ ] Includes clear documentation/examples
 - [ ] Code/examples are copy-paste ready
 - [ ] All links are verified and working
-- [ ] No sensitive information included (keys, tokens, credentials)
+- [ ] No sensitive or private information included (keys, tokens, internal names, home paths)
+- [ ] Slash commands carry surface labels (Dashboard, kiro-cli (terminal), both)
 - [ ] Updated relevant README files
 - [ ] Commit message follows conventional commit format
 - [ ] No large files (>1MB) added
 
 ## Screenshots or Examples
 If applicable, show what this adds:
-```
+
+```text
 [Example code or before/after comparison]
 ```
 

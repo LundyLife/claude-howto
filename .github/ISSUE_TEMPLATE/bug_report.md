@@ -22,14 +22,17 @@ What should happen?
 What actually happened?
 
 ## Environment
-- **Claude Code Version**: (e.g., 1.0.5)
+- **Kiro Crew version**: (output of `kirocrew --version`)
+- **kiro-cli version**: (output of `kiro-cli --version`)
+- **Where it happened**: (Dashboard, a terminal command such as `kirocrew`, or inside `kiro-cli chat`)
 - **Operating System**: (e.g., macOS 14.1, Ubuntu 22.04, Windows 11)
 - **Python Version**: (if relevant, e.g., 3.11)
-- **Affected Component**: (e.g., 01-slash-commands, 03-skills, etc.)
+- **Affected Component**: (e.g., 01-getting-started, 04-skills, etc.)
 
 ## Example Code
-If applicable, provide the example code that's not working:
-```
+If applicable, paste the command or file that is not working. Remove any tokens or private paths first:
+
+```text
 [Insert code here]
 ```
 

@@ -16,7 +16,7 @@ IGNORE_DIRS = {
     "openspec",
     "prompts",
     ".agents",
-    ".claude",
+    ".kiro",
 }
 TIMEOUT = 10
 # Domains/patterns to skip: badges, placeholders, and bot-blocking hosts
@@ -35,9 +35,6 @@ SKIP_DOMAINS = {
     "wikipedia.org",
     # GitHub API requires auth — unauthenticated requests return 404 for protected endpoints
     "api.github.com",
-    # Claude Code native-binary download host — directory listing returns 404, artifacts are
-    # fetched programmatically by the installer via the full filename path
-    "downloads.claude.ai",
 }
 SKIP_DOMAIN_SUFFIXES = (".example.com", ".example.org", ".internal")
 # Placeholder/template URLs that are intentionally non-resolvable
@@ -46,6 +43,8 @@ SKIP_URL_PATTERNS = {
     "github.com/user/",
     "github.com/your-org/",
     "docs.example.com",
+    # TEMP: remove after the GitHub repo rename to kirocrew-howto
+    "github.com/LundyLife/kirocrew-howto",
 }
 
 URL_RE = re.compile(r"https?://[a-zA-Z0-9][a-zA-Z0-9\-._~:/?#\[\]@!$&'()*+,;=%]+")

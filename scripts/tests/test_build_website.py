@@ -51,20 +51,20 @@ def site_root(tmp_path: Path) -> Path:
     (tmp_path / "README.md").write_text(
         "<picture>\n"
         '  <source media="(prefers-color-scheme: dark)" '
-        'srcset="resources/logos/claude-howto-logo-dark.svg">\n'
-        '  <img alt="Claude How To" src="resources/logos/claude-howto-logo.svg">\n'
+        'srcset="resources/logos/kirocrew-howto-logo-dark.svg">\n'
+        '  <img alt="Kiro Crew How To" src="resources/logos/kirocrew-howto-logo.svg">\n'
         "</picture>\n\n"
-        "# Home Page\n\nWelcome. See [Slash Commands](01-slash-commands/README.md).\n"
+        "# Home Page\n\nWelcome. See [Slash Commands](02-approval-modes/README.md).\n"
         "Also check [script](scripts/build.sh) and the [logo](resources/logos/logo.svg).\n"
     )
     (tmp_path / "LEARNING-ROADMAP.md").write_text(
         "# Learning Roadmap\n\nLink back to [Home](README.md#home-page).\n"
     )
     (tmp_path / "CONTRIBUTING.md").write_text("# Contributing\n\nHelp improve docs.")
-    (tmp_path / "CLAUDE.md").write_text("# Internal Agent Notes\n")
+    (tmp_path / "AGENTS.md").write_text("# Internal Agent Notes\n")
     (tmp_path / "update-plan-2026-05-02.md").write_text("# Temporary Plan\n")
 
-    sc = tmp_path / "01-slash-commands"
+    sc = tmp_path / "02-approval-modes"
     sc.mkdir()
     (sc / "README.md").write_text(
         "# Slash Commands\n\n## Advanced Usage\n\nMermaid time:\n\n```mermaid\nflowchart LR\nA-->B\n```\n\n"
@@ -80,8 +80,8 @@ def site_root(tmp_path: Path) -> Path:
     logos = tmp_path / "resources" / "logos"
     logos.mkdir(parents=True)
     (logos / "logo.svg").write_text("<svg></svg>")
-    (logos / "claude-howto-logo.svg").write_text("<svg></svg>")
-    (logos / "claude-howto-logo-dark.svg").write_text("<svg></svg>")
+    (logos / "kirocrew-howto-logo.svg").write_text("<svg></svg>")
+    (logos / "kirocrew-howto-logo-dark.svg").write_text("<svg></svg>")
 
     return tmp_path
 
@@ -143,14 +143,14 @@ class TestSourceToSiteUrl:
 
     def test_folder_readme_maps_to_folder_index(self) -> None:
         assert (
-            source_to_site_url("01-slash-commands/README.md")
-            == "01-slash-commands/index.html"
+            source_to_site_url("02-approval-modes/README.md")
+            == "02-approval-modes/index.html"
         )
 
     def test_other_markdown_uses_html_extension(self) -> None:
         assert (
-            source_to_site_url("01-slash-commands/example.md")
-            == "01-slash-commands/example.html"
+            source_to_site_url("02-approval-modes/example.md")
+            == "02-approval-modes/example.html"
         )
 
 
@@ -203,12 +203,12 @@ class TestIsExcludedDir:
         assert is_excluded_dir("node_modules") is True
 
     def test_chapter_dir_kept(self) -> None:
-        assert is_excluded_dir("01-slash-commands") is False
+        assert is_excluded_dir("02-approval-modes") is False
 
 
 class TestIsExcludedTopLevelMarkdown:
     def test_internal_agent_file_excluded(self) -> None:
-        assert is_excluded_top_level_markdown("CLAUDE.md") is True
+        assert is_excluded_top_level_markdown("AGENTS.md") is True
 
     def test_temporary_update_plan_excluded(self) -> None:
         assert is_excluded_top_level_markdown("update-plan-2026-05-02.md") is True
@@ -248,7 +248,7 @@ class TestCollectPages:
         )
         assert "CONTRIBUTING.md" in state.source_to_url
         assert state.source_to_url["CONTRIBUTING.md"] == "CONTRIBUTING.html"
-        assert "CLAUDE.md" not in state.source_to_url
+        assert "AGENTS.md" not in state.source_to_url
         assert "update-plan-2026-05-02.md" not in state.source_to_url
 
 
@@ -314,7 +314,7 @@ class TestRewriteLinks:
         state = BuildState()
         state.source_to_url = {
             "README.md": "index.html",
-            "01-slash-commands/README.md": "01-slash-commands/index.html",
+            "02-approval-modes/README.md": "02-approval-modes/index.html",
         }
         return state
 
@@ -330,8 +330,8 @@ class TestRewriteLinks:
         self, tmp_path: Path, logger: logging.Logger
     ) -> None:
         (tmp_path / "README.md").write_text("# Home")
-        (tmp_path / "01-slash-commands").mkdir()
-        (tmp_path / "01-slash-commands" / "README.md").write_text("# Slash")
+        (tmp_path / "02-approval-modes").mkdir()
+        (tmp_path / "02-approval-modes" / "README.md").write_text("# Slash")
         page = PageInfo(
             source=tmp_path / "README.md",
             rel_source="README.md",
@@ -340,17 +340,17 @@ class TestRewriteLinks:
             section="Introduction",
             is_section_index=True,
         )
-        html_in = '<a href="01-slash-commands/README.md">go</a>'
+        html_in = '<a href="02-approval-modes/README.md">go</a>'
         out = rewrite_links(
             html_in, page, self._state(), self._config(tmp_path), logger
         )
-        assert "01-slash-commands/index.html" in out
+        assert "02-approval-modes/index.html" in out
         assert ".md" not in out
 
     def test_anchor_preserved(self, tmp_path: Path, logger: logging.Logger) -> None:
         (tmp_path / "README.md").write_text("# Home")
-        (tmp_path / "01-slash-commands").mkdir()
-        (tmp_path / "01-slash-commands" / "README.md").write_text("# Slash")
+        (tmp_path / "02-approval-modes").mkdir()
+        (tmp_path / "02-approval-modes" / "README.md").write_text("# Slash")
         page = PageInfo(
             source=tmp_path / "README.md",
             rel_source="README.md",
@@ -359,7 +359,7 @@ class TestRewriteLinks:
             section="Introduction",
             is_section_index=True,
         )
-        html_in = '<a href="01-slash-commands/README.md#run">go</a>'
+        html_in = '<a href="02-approval-modes/README.md#run">go</a>'
         out = rewrite_links(
             html_in, page, self._state(), self._config(tmp_path), logger
         )
@@ -437,11 +437,11 @@ class TestRewriteLinks:
             is_section_index=True,
         )
         (tmp_path / "README.md").write_text("# Home")
-        html_in = '<a href="https://anthropic.com">site</a>'
+        html_in = '<a href="https://kiro.dev">site</a>'
         out = rewrite_links(
             html_in, page, self._state(), self._config(tmp_path), logger
         )
-        assert 'href="https://anthropic.com"' in out
+        assert 'href="https://kiro.dev"' in out
 
 
 # =============================================================================
@@ -466,7 +466,7 @@ class TestBuildWebsite:
         assert index.exists()
         index_html = index.read_text(encoding="utf-8")
         assert "Home Page" in index_html
-        assert "01-slash-commands/index.html" in index_html
+        assert "02-approval-modes/index.html" in index_html
         assert "CONTRIBUTING.html" in index_html
         # Non-markdown link rewritten to GitHub
         assert "github.com/example/repo/blob/main/scripts/build.sh" in index_html
@@ -475,11 +475,11 @@ class TestBuildWebsite:
 
         # Additional top-level docs rendered
         assert (out_dir / "CONTRIBUTING.html").exists()
-        assert not (out_dir / "CLAUDE.html").exists()
+        assert not (out_dir / "AGENTS.html").exists()
         assert not (out_dir / "update-plan-2026-05-02.html").exists()
 
         # Folder index rendered
-        sc_index = out_dir / "01-slash-commands" / "index.html"
+        sc_index = out_dir / "02-approval-modes" / "index.html"
         assert sc_index.exists()
         sc_html = sc_index.read_text(encoding="utf-8")
         # Mermaid block became a <pre class="mermaid"> block
@@ -488,7 +488,7 @@ class TestBuildWebsite:
         assert "example.html" in sc_html
 
         # Example page rendered
-        example_page = out_dir / "01-slash-commands" / "example.html"
+        example_page = out_dir / "02-approval-modes" / "example.html"
         assert example_page.exists()
         example_html = example_page.read_text(encoding="utf-8")
         # Back-link to README rewrites to index.html
@@ -863,7 +863,7 @@ def _roadmap_module(lessons: list[dict], **overrides) -> dict:
         "id": "slash-commands",
         "number": "01",
         "title": "Slash Commands",
-        "source": "01-slash-commands/README.md",
+        "source": "02-approval-modes/README.md",
         "time": "30 min",
         "tagline": "Commands.",
         "lessons": lessons,
@@ -924,7 +924,7 @@ class TestLanding:
         assert copy_status.get("role") == "status"
         assert copy_status.get("aria-live") == "polite"
         # Lesson anchors resolve into the module page
-        assert "01-slash-commands/index.html#advanced-usage" in index_html
+        assert "02-approval-modes/index.html#advanced-usage" in index_html
         # Landing assets are copied and referenced alongside the site CSS
         assert (out_dir / "assets" / "landing.css").exists()
         assert (out_dir / "assets" / "landing.js").exists()
@@ -1015,7 +1015,7 @@ class TestLanding:
         build_website(config, logger, skip_vendor=True)
         index_html = (out_dir / "index.html").read_text(encoding="utf-8")
         assert 'id="roadmap"' in index_html
-        assert 'data-lesson="slash-commands/overview"' in index_html
+        assert 'data-lesson="getting-started/start"' in index_html
         assert (out_dir / "guide.html").exists()
 
     def test_landing_off_keeps_readme_index(

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/plugin.json",
+  "name": "docs-helper",
+  "version": "1.0.0",
+  "description": "Write a README and check documentation for problems.",
+  "author": { "name": "Kiro Crew How To contributors" },
+  "license": "MIT",
+  "keywords": ["documentation", "example"],
+  "skills": "./skills",
+  "interface": { "displayName": "Docs Helper" }
+}

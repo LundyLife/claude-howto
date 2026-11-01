@@ -1,40 +1,28 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="logos/claude-howto-logo-dark.svg">
-  <img alt="Claude How To" src="logos/claude-howto-logo.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="logos/kirocrew-howto-logo-dark.svg">
+  <img alt="Kiro Crew How To" src="logos/kirocrew-howto-logo.svg">
 </picture>
 
-# Claude How To - Brand Assets
+# Kiro Crew How To - Brand Assets
 
-Complete collection of logos, icons, and favicons for the Claude How To project. All assets use the V3.0 design: a compass with code bracket (`>`) symbol, representing guided navigation through code — using a Black/White/Gray palette with Bright Green (#22C55E) accent.
+Complete collection of logos, icons, and favicons for the Kiro Crew How To project. All assets use the V3.0 design: a compass with code bracket (`>`) symbol, representing guided navigation through code — using a Black/White/Gray palette with Bright Green (#22C55E) accent.
 
 ## Directory Structure
 
 ```
 resources/
 ├── logos/
-│   ├── claude-howto-logo.svg       # Main logo - Light mode (520×120px)
-│   └── claude-howto-logo-dark.svg  # Main logo - Dark mode (520×120px)
+│   ├── kirocrew-howto-logo.svg       # Main logo - Light mode (580×120px)
+│   └── kirocrew-howto-logo-dark.svg  # Main logo - Dark mode (580×120px)
 ├── icons/
-│   ├── claude-howto-icon.svg       # App icon - Light mode (256×256px)
-│   └── claude-howto-icon-dark.svg  # App icon - Dark mode (256×256px)
+│   ├── kirocrew-howto-icon.svg       # App icon - Light mode (256×256px)
+│   └── kirocrew-howto-icon-dark.svg  # App icon - Dark mode (256×256px)
 └── favicons/
     ├── favicon-16.svg              # Favicon - 16×16px
     ├── favicon-32.svg              # Favicon - 32×32px (primary)
     ├── favicon-64.svg              # Favicon - 64×64px
     ├── favicon-128.svg             # Favicon - 128×128px
     └── favicon-256.svg             # Favicon - 256×256px
-```
-
-Additional assets in `assets/logo/`:
-```
-assets/logo/
-├── logo-full.svg       # Mark + wordmark (horizontal)
-├── logo-mark.svg       # Compass symbol only (120×120px)
-├── logo-wordmark.svg   # Text only
-├── logo-icon.svg       # App icon (512×512, rounded)
-├── favicon.svg         # 16×16 optimized
-├── logo-white.svg      # White version for dark backgrounds
-└── logo-black.svg      # Black monochrome version
 ```
 
 ## Assets Overview
@@ -51,11 +39,11 @@ assets/logo/
 ### Logos
 
 **Files**:
-- `logos/claude-howto-logo.svg` (Light mode)
-- `logos/claude-howto-logo-dark.svg` (Dark mode)
+- `logos/kirocrew-howto-logo.svg` (Light mode)
+- `logos/kirocrew-howto-logo-dark.svg` (Dark mode)
 
 **Specifications**:
-- **Size**: 520×120 px
+- **Size**: 580×120 px
 - **Purpose**: Main header/branding logo with wordmark
 - **Usage**:
   - Website headers
@@ -68,8 +56,8 @@ assets/logo/
 ### Icons
 
 **Files**:
-- `icons/claude-howto-icon.svg` (Light mode)
-- `icons/claude-howto-icon-dark.svg` (Dark mode)
+- `icons/kirocrew-howto-icon.svg` (Light mode)
+- `icons/kirocrew-howto-icon-dark.svg` (Dark mode)
 
 **Specifications**:
 - **Size**: 256×256 px
@@ -249,14 +237,15 @@ inkscape -D -z --file=favicon-256.svg --export-png=favicon-256.png
 
 ## Attribution
 
-These assets are part of the Claude How To project.
+These assets are part of the Kiro Crew How To project.
 
 **License**: MIT (see project LICENSE file)
 
 ## Version History
 
 - **v3.0** (February 2026): Compass-bracket design with Black/White/Gray + Green accent palette
-- **v2.0** (January 2026): Claude-inspired 12-ray starburst design with emerald palette
+- **v3.1** (October 2026): Wordmark changed to "Kiro Crew How-To" for kirocrew-howto; compass art unchanged
+- **v2.0** (January 2026): 12-ray starburst design with emerald palette
 - **v1.0** (January 2026): Original hexagon-based progression icon design
 
 ---

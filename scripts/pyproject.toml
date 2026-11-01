@@ -1,15 +1,13 @@
 [project]
-name = "claude-howto"
+name = "kirocrew-howto"
 version = "1.0.0"
-description = "Claude Code How-To Guide with EPUB builder"
+description = "Kiro Crew How-To Guide website builder and doc checks"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
 dependencies = [
-    "ebooklib",
     "markdown",
     "beautifulsoup4",
-    "pillow",
     "jinja2",
 ]
 
@@ -33,7 +31,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where = ["scripts"]
-include = ["build_epub"]
+include = ["build_website"]
 exclude = ["tests", "tests.*"]
 
 # =============================================================================
@@ -85,7 +83,7 @@ fixable = ["ALL"]
 unfixable = []
 
 [tool.ruff.lint.isort]
-known-first-party = ["build_epub"]
+known-first-party = ["build_website"]
 force-single-line = false
 combine-as-imports = true
 
@@ -110,14 +108,6 @@ python_version = "3.11"
 ignore_missing_imports = true
 no_implicit_optional = true
 warn_unused_ignores = true
-
-[[tool.mypy.overrides]]
-module = ["build_epub", "scripts.build_epub"]
-ignore_errors = true
-
-[[tool.mypy.overrides]]
-module = ["sync_translations", "scripts.sync_translations"]
-ignore_errors = true
 
 [tool.bandit]
 targets = ["scripts"]

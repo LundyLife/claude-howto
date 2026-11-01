@@ -51,6 +51,17 @@ def test_valid_in_repo_link_passes(
     assert "All cross-references valid" in capsys.readouterr().out
 
 
+def test_absolute_url_md_links_are_not_treated_as_files(
+    repo: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    (repo / "README.md").write_text(
+        "# Doc\n\n[guide](https://example.com/docs/guide.md)\n"
+    )
+
+    assert check_cross_references.main() == 0
+    assert "broken cross-reference" not in capsys.readouterr().out
+
+
 def test_numbered_lesson_dir_missing_readme_is_reported(
     repo: Path, capsys: pytest.CaptureFixture[str]
 ) -> None:
@@ -91,9 +102,7 @@ def test_heading_anchor_still_strips_em_dash_and_zero_width_joiner() -> None:
         ("クイックスタート — 概要", "クイックスタート--概要"),
     ],
 )
-def test_heading_anchor_unchanged_for_existing_locales(
-    heading: str, anchor: str
-) -> None:
+def test_heading_anchor_handles_unicode_scripts(heading: str, anchor: str) -> None:
     assert check_cross_references.heading_to_anchor(heading) == anchor
 
 

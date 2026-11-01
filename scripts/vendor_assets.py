@@ -7,8 +7,7 @@ copied into the built site's `assets/vendor/` directory.
 Pele (https://github.com/obsidianmd/pele) renders the Mermaid diagrams. Its
 bundle is pinned to an exact version and every file is sha256-verified each
 time it is used, so a stale or corrupted cache is re-downloaded rather than
-trusted. The website, the Mermaid validator and the EPUB builder all share the
-same cached copy.
+trusted. The website and the Mermaid validator share the same cached copy.
 
 The Tailwind standalone CLI (a Go binary, no Node.js required) is downloaded
 on first use and reused thereafter. We pin to Tailwind v3 because the templates

@@ -24,19 +24,19 @@ cp resources/favicons/* /path/to/your/website/public/
 ## Use in Markdown/Documentation
 
 ```markdown
-# Claude How To
+# Kiro Crew How To
 
-![Claude How To Logo](resources/logos/claude-howto-logo.svg)
+![Kiro Crew How To Logo](resources/logos/kirocrew-howto-logo.svg)
 
-![Icon](resources/icons/claude-howto-icon.svg)
+![Icon](resources/icons/kirocrew-howto-icon.svg)
 ```
 
 ## Recommended Sizes
 
 | Purpose | Size | File |
 |---------|------|------|
-| Website header | 520×120 | `logos/claude-howto-logo.svg` |
-| App icon | 256×256 | `icons/claude-howto-icon.svg` |
+| Website header | 580×120 | `logos/kirocrew-howto-logo.svg` |
+| App icon | 256×256 | `icons/kirocrew-howto-icon.svg` |
 | Browser tab | 32×32 | `favicons/favicon-32.svg` |
 | Mobile home screen | 128×128 | `favicons/favicon-128.svg` |
 | Desktop app | 256×256 | `favicons/favicon-256.svg` |
@@ -67,17 +67,17 @@ This symbolizes "finding your way through code with clear guidance."
 ## What to Use Where
 
 ### Website
-- **Header**: Logo (`logos/claude-howto-logo.svg`)
+- **Header**: Logo (`logos/kirocrew-howto-logo.svg`)
 - **Favicon**: 32px (`favicons/favicon-32.svg`)
-- **Social preview**: Icon (`icons/claude-howto-icon.svg`)
+- **Social preview**: Icon (`icons/kirocrew-howto-icon.svg`)
 
 ### GitHub
-- **README badge**: Icon (`icons/claude-howto-icon.svg`) at 64-128px
-- **Repository avatar**: Icon (`icons/claude-howto-icon.svg`)
+- **README badge**: Icon (`icons/kirocrew-howto-icon.svg`) at 64-128px
+- **Repository avatar**: Icon (`icons/kirocrew-howto-icon.svg`)
 
 ### Social Media
-- **Profile picture**: Icon (`icons/claude-howto-icon.svg`)
-- **Banner**: Logo (`logos/claude-howto-logo.svg`)
+- **Profile picture**: Icon (`icons/kirocrew-howto-icon.svg`)
+- **Banner**: Logo (`logos/kirocrew-howto-logo.svg`)
 - **Thumbnail**: Icon at 256×256px
 
 ### Documentation

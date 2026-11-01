@@ -1,185 +1,908 @@
 {
   "levels": [
     {
-      "id": "beginner",
-      "name": "Level 1 — Beginner",
-      "title": "Getting started",
-      "summary": "Get productive on day one: commands, memory, safe rewinds and the CLI basics.",
+      "id": "novice",
+      "name": "🟢 Novice — Modules 0-5",
+      "title": "Your first agent",
+      "summary": "No AI experience and no terminal needed: install, chat, choose when it asks first, keep chats tidy, make it remember you, and fix mistakes.",
       "modules": [
         {
-          "id": "slash-commands",
-          "number": "01",
-          "title": "Slash Commands",
-          "source": "01-slash-commands/README.md",
-          "time": "30 min",
-          "tagline": "Built-in commands, custom commands and team shortcuts.",
+          "id": "what-is-an-agent",
+          "number": "0",
+          "title": "What is an AI agent?",
+          "source": "00-what-is-an-agent/README.md",
+          "time": "15 min",
+          "tagline": "What an agent is, and why an answer can be wrong.",
           "lessons": [
-            {"id": "overview", "title": "Overview", "heading": "Overview"},
-            {"id": "built-in", "title": "Built-in commands reference", "heading": "Built-in Commands Reference"},
-            {"id": "custom", "title": "Custom commands (now skills)", "heading": "Custom Commands (Now Skills)"},
-            {"id": "mcp-prompts", "title": "MCP prompts as commands", "heading": "MCP Prompts as Commands"},
-            {"id": "create", "title": "Create your own commands", "heading": "Creating Your Own Commands"},
-            {"id": "best-practices", "title": "Best practices", "heading": "Best Practices"}
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
+          ]
+        },
+        {
+          "id": "getting-started",
+          "number": "1",
+          "title": "Get it running and say hello",
+          "source": "01-getting-started/README.md",
+          "time": "45 min",
+          "tagline": "Install the desktop app, sign in, and find your way around.",
+          "lessons": [
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
+          ]
+        },
+        {
+          "id": "approval-modes",
+          "number": "2",
+          "title": "Decide how often it asks first",
+          "source": "02-approval-modes/README.md",
+          "time": "20 min",
+          "tagline": "Choose how often the agent checks with you first.",
+          "lessons": [
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
+          ]
+        },
+        {
+          "id": "sessions",
+          "number": "3",
+          "title": "Keep chats tidy and pick up where you left off",
+          "source": "03-sessions/README.md",
+          "time": "20 min",
+          "tagline": "Keep work apart and find yesterday's chat.",
+          "lessons": [
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
           ]
         },
         {
           "id": "memory",
-          "number": "02",
-          "title": "Memory",
-          "source": "02-memory/README.md",
-          "time": "45 min",
-          "tagline": "CLAUDE.md, rules and auto memory that persist across sessions.",
-          "lessons": [
-            {"id": "overview", "title": "Overview", "heading": "Overview"},
-            {"id": "quick-start", "title": "Quick start: initialize memory", "heading": "Quick Start: Initializing Memory"},
-            {"id": "hierarchy", "title": "The memory hierarchy", "heading": "Memory Hierarchy in Claude Code"},
-            {"id": "rules", "title": "Modular rules system", "heading": "Modular Rules System"},
-            {"id": "auto-memory", "title": "Auto memory", "heading": "Auto Memory"}
-          ]
-        },
-        {
-          "id": "checkpoints",
-          "number": "08",
-          "title": "Checkpoints",
-          "source": "08-checkpoints/README.md",
-          "time": "45 min",
-          "tagline": "Try bold ideas and rewind in one keystroke.",
-          "lessons": [
-            {"id": "overview", "title": "Overview", "heading": "Overview"},
-            {"id": "accessing", "title": "Accessing checkpoints", "heading": "Accessing Checkpoints"},
-            {"id": "rewind", "title": "Rewind options", "heading": "Rewind Options"},
-            {"id": "patterns", "title": "Workflow patterns", "heading": "Workflow Patterns"},
-            {"id": "git", "title": "Checkpoints and Git", "heading": "Integration with Git"}
-          ]
-        },
-        {
-          "id": "cli",
-          "number": "10",
-          "title": "CLI",
-          "source": "10-cli/README.md",
+          "number": "4",
+          "title": "Make it remember you, or not",
+          "source": "04-memory/README.md",
           "time": "30 min",
-          "tagline": "Interactive and print mode, flags and scripting.",
+          "tagline": "Make it remember how you like things, or keep a chat private.",
           "lessons": [
-            {"id": "overview", "title": "Overview", "heading": "Overview"},
-            {"id": "commands", "title": "CLI commands", "heading": "CLI Commands"},
-            {"id": "flags", "title": "Core flags", "heading": "Core Flags"},
-            {"id": "output", "title": "Output and formats", "heading": "Output & Format"},
-            {"id": "use-cases", "title": "High-value use cases", "heading": "High-Value Use Cases"}
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
+          ]
+        },
+        {
+          "id": "fix-a-mistake",
+          "number": "5",
+          "title": "Fix a mistake",
+          "source": "05-fix-a-mistake/README.md",
+          "time": "30 min",
+          "tagline": "Rewind the chat, and get files back with git.",
+          "lessons": [
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
           ]
         }
       ]
     },
     {
       "id": "intermediate",
-      "name": "Level 2 — Intermediate",
-      "title": "Building workflows",
-      "summary": "Automate with skills and hooks, then connect live data and delegate to subagents.",
+      "name": "🔵 Intermediate — Modules 6-14",
+      "title": "Make it fit your work",
+      "summary": "Rules, prompts and skills; your own documents; safety layers; outside tools; websites; daily summaries; alerts; and your phone.",
       "modules": [
         {
+          "id": "prompts-and-steering",
+          "number": "6",
+          "title": "Standing rules and reusable prompts",
+          "source": "06-prompts-and-steering/README.md",
+          "time": "30 min",
+          "tagline": "Saved prompts with @name and standing rules in steering files.",
+          "lessons": [
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
+          ]
+        },
+        {
           "id": "skills",
-          "number": "03",
-          "title": "Skills",
-          "source": "03-skills/README.md",
-          "time": "1 hour",
-          "tagline": "Reusable expertise Claude loads only when it needs it.",
+          "number": "7",
+          "title": "Teach it a procedure: skills",
+          "source": "07-skills/README.md",
+          "time": "35 min",
+          "tagline": "Teach it a set of steps once, and load it with $name.",
           "lessons": [
-            {"id": "overview", "title": "Overview", "heading": "Overview"},
-            {"id": "progressive-disclosure", "title": "Progressive disclosure", "heading": "How Skills Work: Progressive Disclosure"},
-            {"id": "create", "title": "Create custom skills", "heading": "Creating Custom Skills"},
-            {"id": "invocation", "title": "Control skill invocation", "heading": "Controlling Skill Invocation"},
-            {"id": "subagents", "title": "Run skills in subagents", "heading": "Running Skills in Subagents"},
-            {"id": "manage", "title": "Manage skills", "heading": "Managing Skills"}
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
           ]
         },
         {
-          "id": "hooks",
-          "number": "06",
-          "title": "Hooks",
-          "source": "06-hooks/README.md",
-          "time": "1 hour",
-          "tagline": "Quality gates and automation on every tool call and event.",
+          "id": "knowledge-library",
+          "number": "8",
+          "title": "Ask about your own documents",
+          "source": "08-knowledge-library/README.md",
+          "time": "25 min",
+          "tagline": "Search your own notes and see where each answer came from.",
           "lessons": [
-            {"id": "overview", "title": "Overview", "heading": "Overview"},
-            {"id": "configuration", "title": "Configuration", "heading": "Configuration"},
-            {"id": "types", "title": "Hook types", "heading": "Hook Types"},
-            {"id": "events", "title": "Hook events", "heading": "Hook Events"},
-            {"id": "io", "title": "Hook input and output", "heading": "Hook Input and Output"},
-            {"id": "prompt-hooks", "title": "Prompt-based hooks", "heading": "Prompt-Based Hooks"},
-            {"id": "debugging", "title": "Debugging hooks", "heading": "Debugging"}
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
           ]
         },
         {
-          "id": "mcp",
-          "number": "05",
-          "title": "MCP",
-          "source": "05-mcp/README.md",
-          "time": "1 hour",
-          "tagline": "Connect GitHub, databases and APIs as live tools.",
+          "id": "protect-secrets-and-files",
+          "number": "9",
+          "title": "Protect your secrets and your files",
+          "source": "09-protect-secrets-and-files/README.md",
+          "time": "30 min",
+          "tagline": "What each safety layer guards, and what it does not.",
           "lessons": [
-            {"id": "overview", "title": "Overview", "heading": "Overview"},
-            {"id": "install", "title": "Installation methods", "heading": "MCP Installation Methods"},
-            {"id": "scopes", "title": "MCP scopes", "heading": "MCP Scopes"},
-            {"id": "resources", "title": "Resources via @ mentions", "heading": "MCP Resources via @ Mentions"},
-            {"id": "tool-search", "title": "MCP tool search", "heading": "MCP Tool Search"},
-            {"id": "serve", "title": "Claude as an MCP server", "heading": "Claude as MCP Server (`claude mcp serve`)"}
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
           ]
         },
         {
-          "id": "subagents",
-          "number": "04",
-          "title": "Subagents",
-          "source": "04-subagents/README.md",
-          "time": "1.5 hours",
-          "tagline": "Delegate to specialists with their own context and tools.",
+          "id": "connections",
+          "number": "10",
+          "title": "Connect your tools",
+          "source": "10-connections/README.md",
+          "time": "30 min",
+          "tagline": "Plug outside tools into the agent.",
           "lessons": [
-            {"id": "overview", "title": "Overview", "heading": "Overview"},
-            {"id": "configuration", "title": "Configuration", "heading": "Configuration"},
-            {"id": "built-in", "title": "Built-in subagents", "heading": "Built-in Subagents"},
-            {"id": "chaining", "title": "Chaining subagents", "heading": "Chaining Subagents"},
-            {"id": "background", "title": "Background subagents", "heading": "Background Subagents"},
-            {"id": "worktree", "title": "Worktree isolation", "heading": "Worktree Isolation"},
-            {"id": "teams", "title": "Agent teams", "heading": "Agent Teams (Experimental)"}
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
+          ]
+        },
+        {
+          "id": "browser",
+          "number": "11",
+          "title": "Let it use a website",
+          "source": "11-browser/README.md",
+          "time": "20 min",
+          "tagline": "Watch it click through a website, and take over.",
+          "lessons": [
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
+          ]
+        },
+        {
+          "id": "scheduled-jobs",
+          "number": "12",
+          "title": "Get a daily summary",
+          "source": "12-scheduled-jobs/README.md",
+          "time": "30 min",
+          "tagline": "Get a summary every weekday morning.",
+          "lessons": [
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
+          ]
+        },
+        {
+          "id": "monitors",
+          "number": "13",
+          "title": "Tell me when something changes",
+          "source": "13-monitors/README.md",
+          "time": "30 min",
+          "tagline": "Be told only when something changes.",
+          "lessons": [
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
+          ]
+        },
+        {
+          "id": "phone-and-chat-apps",
+          "number": "14",
+          "title": "Reach it from your phone or chat app",
+          "source": "14-phone-and-chat-apps/README.md",
+          "time": "60 min",
+          "tagline": "Ask and approve from Slack on your phone.",
+          "lessons": [
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
           ]
         }
       ]
     },
     {
       "id": "advanced",
-      "name": "Level 3 — Advanced",
-      "title": "Power user",
-      "summary": "Plan, run headless and on a schedule, then package everything as a plugin for your team.",
+      "name": "🟣 Advanced — Modules 15-19",
+      "title": "Hand it bigger jobs",
+      "summary": "Parallel helpers, unattended task lists, restartable workflows, versioned artifacts, and named specialists with their own memory.",
       "modules": [
         {
-          "id": "advanced-features",
-          "number": "09",
-          "title": "Advanced Features",
-          "source": "09-advanced-features/README.md",
-          "time": "2–3 hours",
-          "tagline": "Planning, auto mode, permissions, headless runs and more.",
+          "id": "parallel-helpers",
+          "number": "15",
+          "title": "Many tasks at once",
+          "source": "15-parallel-helpers/README.md",
+          "time": "30 min",
+          "tagline": "Three lookups at once, merged into one answer.",
           "lessons": [
-            {"id": "overview", "title": "Overview", "heading": "Overview"},
-            {"id": "planning", "title": "Planning mode", "heading": "Planning Mode"},
-            {"id": "thinking", "title": "Extended thinking", "heading": "Extended Thinking"},
-            {"id": "auto-mode", "title": "Auto mode", "heading": "Auto Mode"},
-            {"id": "scheduled", "title": "Scheduled tasks", "heading": "Scheduled Tasks"},
-            {"id": "permissions", "title": "Permission modes", "heading": "Permission Modes"},
-            {"id": "headless", "title": "Headless mode", "heading": "Headless Mode"}
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
           ]
         },
         {
-          "id": "plugins",
-          "number": "07",
-          "title": "Plugins",
-          "source": "07-plugins/README.md",
-          "time": "2 hours",
-          "tagline": "Bundle commands, agents, hooks and MCP into one install.",
+          "id": "task-runner",
+          "number": "16",
+          "title": "Work while you're away",
+          "source": "16-task-runner/README.md",
+          "time": "40 min",
+          "tagline": "Hand it a task file and let it work while you are away.",
           "lessons": [
-            {"id": "overview", "title": "Overview", "heading": "Overview"},
-            {"id": "architecture", "title": "Plugin architecture", "heading": "Plugin Architecture"},
-            {"id": "structure", "title": "Plugin definition structure", "heading": "Plugin Definition Structure"},
-            {"id": "marketplace", "title": "Plugin marketplace", "heading": "Plugin Marketplace"},
-            {"id": "testing", "title": "Test a plugin", "heading": "Testing a Plugin"},
-            {"id": "publishing", "title": "Publish a plugin", "heading": "Publishing a Plugin"}
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
+          ]
+        },
+        {
+          "id": "workflows",
+          "number": "17",
+          "title": "Long jobs that can restart from a step",
+          "source": "17-workflows/README.md",
+          "time": "45 min",
+          "tagline": "A job in steps that can restart from the step that failed.",
+          "lessons": [
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
+          ]
+        },
+        {
+          "id": "artifacts",
+          "number": "18",
+          "title": "Keep and improve what it made",
+          "source": "18-artifacts/README.md",
+          "time": "25 min",
+          "tagline": "Keep what it made, improve it, and revert a bad edit.",
+          "lessons": [
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
+          ]
+        },
+        {
+          "id": "mates-and-agents",
+          "number": "19",
+          "title": "Named specialists with their own memory",
+          "source": "19-mates-and-agents/README.md",
+          "time": "45 min",
+          "tagline": "Mates (a Feature Preview) with memory and goals, and custom agents.",
+          "lessons": [
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expert",
+      "name": "🔴 Expert — Modules 20-23",
+      "title": "Build on top of it",
+      "summary": "Your own scripts at fixed moments, jobs started by other programs, a small app, and backups, a second instance and hosting.",
+      "modules": [
+        {
+          "id": "hooks",
+          "number": "20",
+          "title": "Your own automatic checks: hooks",
+          "source": "20-hooks/README.md",
+          "time": "30 min",
+          "tagline": "A PostToolUse log and a Stop hook that checks once.",
+          "lessons": [
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
+          ]
+        },
+        {
+          "id": "webhooks",
+          "number": "21",
+          "title": "Let another program start a job",
+          "source": "21-webhooks/README.md",
+          "time": "35 min",
+          "tagline": "Webhooks (a Feature Preview): another program starts a job.",
+          "lessons": [
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
+          ]
+        },
+        {
+          "id": "apps",
+          "number": "22",
+          "title": "Build a small app",
+          "source": "22-apps/README.md",
+          "time": "60 min",
+          "tagline": "Package a page, a skill and a scheduled job as one app.",
+          "lessons": [
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
+          ]
+        },
+        {
+          "id": "backup-and-hosting",
+          "number": "23",
+          "title": "Back up, move, or host it",
+          "source": "23-backup-and-hosting/README.md",
+          "time": "50 min",
+          "tagline": "Snapshot, restore into a second instance, and hosting options.",
+          "lessons": [
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
+          ]
+        },
+        {
+          "id": "capstone",
+          "number": "Cap",
+          "title": "Capstone: My morning desk",
+          "source": "capstone-morning-desk/README.md",
+          "time": "2-3 h",
+          "tagline": "My morning desk: a weekday briefing on your phone.",
+          "lessons": [
+            {
+              "id": "start",
+              "title": "What you will learn",
+              "heading": "What you will learn"
+            },
+            {
+              "id": "prep",
+              "title": "Before you start",
+              "heading": "Before you start"
+            },
+            {
+              "id": "steps",
+              "title": "Step by step",
+              "heading": "Step by step"
+            },
+            {
+              "id": "practice",
+              "title": "Try it yourself",
+              "heading": "Try it yourself"
+            },
+            {
+              "id": "problems",
+              "title": "Common problems",
+              "heading": "Common problems"
+            }
           ]
         }
       ]

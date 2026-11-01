@@ -17,7 +17,7 @@ assignees: ''
 
 ## Location
 Which section has the issue?
-- **File**: (e.g., README.md, 03-skills/README.md)
+- **File**: (e.g., README.md, 07-skills/README.md)
 - **Section**: (e.g., "Installation Quick Reference")
 - **Line/Area**: (if specific)
 

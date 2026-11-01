@@ -1,0 +1,5 @@
+# Local test copies of skills
+.kiro/
+
+# Output written by the blog-draft skill
+blog-posts/

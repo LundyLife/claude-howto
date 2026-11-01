@@ -1,10 +1,10 @@
-# Claude How To - Design System
+# Kiro Crew How To - Design System
 
 ## Visual Identity
 
 ### Icon Design Concept: Compass with Code Bracket
 
-The Claude How To icon uses a **compass with a `>` code bracket** to represent guided navigation through code:
+The Kiro Crew How To icon uses a **compass with a `>` code bracket** to represent guided navigation through code:
 
 ```
      N (green)
@@ -58,7 +58,7 @@ This creates:
 
 ### Logo Font
 - **Family**: Inter, SF Pro Display, -apple-system, Segoe UI, sans-serif
-- **"Claude"**: 42px, weight 700 (bold), Black
+- **"Kiro Crew"**: 42px, weight 700 (bold), Black
 - **"How-To"**: 32px, weight 500 (medium), Gray (#6B7280)
 - **Subtitle**: 10px, weight 500, Gray, letter-spacing 1.5px, uppercase
 
@@ -105,7 +105,7 @@ Center dot          | filled circle  | #22C55E (always green)
 ### Logo Sizing
 
 - **Minimum**: 200px width (for web)
-- **Recommended**: 520px (native size)
+- **Recommended**: 580px (native size)
 - **Maximum**: Unlimited (vector format)
 - **Aspect Ratio**: ~4.3:1 (width:height)
 
@@ -128,7 +128,7 @@ Center dot          | filled circle  | #22C55E (always green)
 │        Clear Space Minimum          │
 │         (logo height / 2)           │
 │                                     │
-│    [COMPASS]  Claude                │
+│    [COMPASS]  Kiro Crew             │
 │               How-To                │
 │                                     │
 └─────────────────────────────────────┘
@@ -160,14 +160,14 @@ All icons center at the midpoint of their canvas:
 ## Application Examples
 
 ### Web Header
-- Size: 520×120px logo
-- File: `logos/claude-howto-logo.svg`
+- Size: 580×120px logo
+- File: `logos/kirocrew-howto-logo.svg`
 - Background: White or dark (#0A0A0A)
 - Padding: 20px minimum
 
 ### App Icon
 - Size: 256×256px
-- File: `icons/claude-howto-icon.svg`
+- File: `icons/kirocrew-howto-icon.svg`
 - Background: White or dark
 - Use: App shortcuts, avatars
 
@@ -178,7 +178,7 @@ All icons center at the midpoint of their canvas:
 
 ### Social Media
 - Profile: 256×256px icon
-- Banner: 520×120px logo (centered)
+- Banner: 580×120px logo (centered)
 
 ### Documentation
 - Chapter Headers: Logo scaled to fit

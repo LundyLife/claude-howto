@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Claude Code Documentation
-    url: https://code.claude.com/docs/en/overview
-    about: Official Claude Code documentation
+  - name: Kiro Crew
+    url: https://github.com/kirodotdev/KiroCrew
+    about: Kiro Crew source, docs and issue tracker (bugs in Kiro Crew itself go here)
+  - name: kiro-cli documentation
+    url: https://kiro.dev/docs/cli/
+    about: Official kiro-cli documentation
   - name: Discussions
-    url: https://github.com/luongnv89/claude-howto/discussions
-    about: Ask questions and share ideas with the community
-  - name: Anthropic Cookbook
-    url: https://github.com/anthropics/anthropic-cookbook
-    about: Official examples and guides from Anthropic
+    url: https://github.com/LundyLife/kirocrew-howto/discussions
+    about: Ask questions and share ideas about this guide

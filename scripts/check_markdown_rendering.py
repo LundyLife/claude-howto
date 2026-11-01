@@ -2,12 +2,12 @@
 """Validate Markdown rendering correctness in tutorial README files.
 
 Catches mechanical rendering bugs that look fine in a diff but render wrong
-on GitHub / in the EPUB build: inner backticks in inline code, unescaped
+on GitHub / on the website: inner backticks in inline code, unescaped
 pipes in table cells, stray $ARGUMENTS / $N outside code, mismatched fences.
 
-Scope: `**/README.md` across the repo (tutorial modules + ja/uk/vi/zh
-translations). Excludes `.venv`, `node_modules`, `.git`, `blog-posts`,
-`.agents`, `.claude`, and `openspec` — these are not tutorial output.
+Scope: `**/README.md` across the repo (the tutorial modules and top-level
+files). Excludes `.venv`, `node_modules`, `.git`, `blog-posts`, `.agents`,
+`.kiro`, `prompts`, and `openspec` — these are not tutorial output.
 
 Each rule is a function `(file_path, content) -> list[str]`. To add a new
 rule: write the function, append `(name, fn)` to `RULES`, add fixtures in
@@ -29,7 +29,7 @@ IGNORE_DIRS = {
     "openspec",
     "prompts",
     ".agents",
-    ".claude",
+    ".kiro",
 }
 
 Rule = Callable[[Path, str], list[str]]

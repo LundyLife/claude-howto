@@ -31,6 +31,7 @@ Temporary Items
 
 # Logs
 *.log
+!21-webhooks/build.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -43,19 +44,19 @@ yarn-error.log*
 # Temporary files
 *.tmp
 *.temp
-# Keep .claude/ clean for hand-on section — except project skills
-.claude/*
-!.claude/skills/
-.claude/skills/*
-!.claude/skills/self-assessment/
-!.claude/skills/lesson-quiz/
+# Keep .kiro/ clean for the hands-on modules — except the two project skills
+# this repo ships. Local kiro-cli / Kiro Crew state never goes in git.
+.kiro/*
+!.kiro/skills/
+.kiro/skills/*
+!.kiro/skills/self-assessment/
+!.kiro/skills/lesson-quiz/
+.kiro/settings/
+.kiro/agents/
 blog-posts/
 
 # Local progress tracker — HTML ships in repo, but exported JSON data files stay local
 local-progress/*.json
-
-# EPUB files in root directory
-/*.epub
 
 # Python virtual environment
 .venv/
@@ -73,6 +74,7 @@ build/
 
 # Coverage reports
 .coverage
+coverage.xml
 htmlcov/
 
 # uv lockfile
@@ -93,14 +95,11 @@ update-plan*.md
 site/
 .gstack/
 
-# Cached vendor binaries/assets (Tailwind CLI, Pele bundle, fonts) for the website,
-# EPUB and Mermaid checks.
+# Cached vendor binaries/assets (Tailwind CLI, Pele bundle, fonts) for the website
+# and the Mermaid checks.
 scripts/.vendor-cache/
 
 # Local agent/tooling state
 .asm-improver/
 .gitissue/
 .idd/
-
-# Personal Claude Code instructions (learners and contributors)
-CLAUDE.local.md

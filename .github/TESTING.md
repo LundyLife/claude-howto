@@ -1,6 +1,6 @@
 # Testing Guide
 
-This document describes the testing infrastructure for Claude How To.
+This document describes the testing infrastructure for Kiro Crew How To.
 
 ## Overview
 
@@ -10,7 +10,6 @@ The project uses GitHub Actions to automatically run tests on every push and pul
 - **Code Quality**: Linting and formatting with Ruff
 - **Security**: Vulnerability scanning with Bandit
 - **Type Checking**: Static type analysis with mypy
-- **Build Verification**: EPUB generation test
 
 ## Running Tests Locally
 
@@ -28,8 +27,8 @@ brew install uv
 
 ```bash
 # Clone the repository
-git clone https://github.com/luongnv89/claude-howto.git
-cd claude-howto
+git clone https://github.com/LundyLife/kirocrew-howto.git
+cd kirocrew-howto
 
 # Create virtual environment
 uv venv
@@ -40,7 +39,7 @@ source .venv/bin/activate  # macOS/Linux
 .venv\Scripts\activate     # Windows
 
 # Install development dependencies
-uv pip install -r requirements-dev.txt
+uv pip install -r scripts/requirements-dev.txt
 ```
 
 ### Run Tests
@@ -53,10 +52,10 @@ pytest scripts/tests/ -v
 pytest scripts/tests/ -v --cov=scripts --cov-report=html
 
 # Run specific test file
-pytest scripts/tests/test_build_epub.py -v
+pytest scripts/tests/test_build_website.py -v
 
 # Run specific test function
-pytest scripts/tests/test_build_epub.py::test_function_name -v
+pytest scripts/tests/test_build_website.py::test_function_name -v
 
 # Run tests in watch mode (requires pytest-watch)
 ptw scripts/tests/
@@ -150,18 +149,7 @@ mypy scripts/ --ignore-missing-imports --no-implicit-optional
 
 **Outcome**: Non-blocking (warning only)
 
-#### 5. Build EPUB
-
-- **Runs on**: Ubuntu latest
-- **Depends on**: pytest, lint, security (all must pass)
-- **What it does**:
-  - Builds the EPUB file using `scripts/build_epub.py`
-  - Verifies the EPUB was created successfully
-  - Uploads EPUB as artifact
-
-**Outcome**: If build fails, the workflow fails (critical)
-
-#### 6. Summary
+#### 5. Summary
 
 - **Runs on**: Ubuntu latest
 - **Depends on**: All other jobs
@@ -280,7 +268,7 @@ uv python install 3.10 3.11 3.12
 # Test with clean environment
 rm -rf .venv
 uv venv
-uv pip install -r requirements-dev.txt
+uv pip install -r scripts/requirements-dev.txt
 pytest scripts/tests/
 ```
 

@@ -1,0 +1,14 @@
+[2026-10-30 08:00:01] Build started for my-project
+[2026-10-30 08:00:02] Installing dependencies...
+[2026-10-30 08:00:19] Installed 42 packages
+[2026-10-30 08:00:20] Running lint...
+[2026-10-30 08:00:24] Lint passed with 2 warnings
+[2026-10-30 08:00:24]   warning: src/report.js line 12: unused variable "total"
+[2026-10-30 08:00:24]   warning: src/report.js line 30: line is longer than 100 characters
+[2026-10-30 08:00:25] Running tests...
+[2026-10-30 08:00:31] PASS tests/math.test.js (8 tests)
+[2026-10-30 08:00:33] PASS tests/dates.test.js (5 tests)
+[2026-10-30 08:00:36] FAIL tests/report.test.js
+[2026-10-30 08:00:36]   report totals: expected 120 but got 119
+[2026-10-30 08:00:36] Tests: 1 failed, 13 passed, 14 total
+[2026-10-30 08:00:36] Build FAILED after 35 seconds

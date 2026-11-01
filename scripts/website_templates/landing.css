@@ -1,5 +1,5 @@
 /* =============================================================================
-   claude-howto landing — "Terminal Luxe" (dark) / "Ivory" (light)
+   kirocrew-howto landing — "Terminal Luxe" (dark) / "Ivory" (light)
    All colors flow through CSS custom properties: `:root` holds the light
    tokens, `html.dark` overrides them with the Terminal Luxe palette, and the
    no-JS media query mirrors `html.dark` (the inline script removes .no-js

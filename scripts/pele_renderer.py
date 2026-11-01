@@ -1,7 +1,7 @@
 """Render Mermaid sources to SVG with the pinned Pele bundle (stdlib only).
 
-Shared by ``check_mermaid.py`` (validation) and ``build_epub.py`` (EPUB
-images). All diagrams of a run go to ONE Node.js process running
+Used by ``check_mermaid.py`` to validate every diagram. All diagrams of a
+run go to ONE Node.js process running
 ``pele_render.mjs``, which imports the sha256-verified bundle from
 ``vendor_assets.ensure_pele_bundle``.
 

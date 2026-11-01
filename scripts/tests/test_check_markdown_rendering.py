@@ -171,15 +171,14 @@ def test_main_ignores_excluded_dirs(
     assert "Markdown rendering clean" in capsys.readouterr().out
 
 
-def test_main_scans_translation_dirs(
-    repo: Path, capsys: pytest.CaptureFixture[str]
-) -> None:
+def test_main_scans_module_dirs(repo: Path, capsys: pytest.CaptureFixture[str]) -> None:
     (repo / "README.md").write_text("# Clean\n")
-    for lang in ("ja", "uk", "vi", "zh"):
-        d = repo / lang
+    modules = ("01-getting-started", "10-advanced")
+    for name in modules:
+        d = repo / name
         d.mkdir()
         (d / "README.md").write_text("Bad: `a`b` here.\n")
     assert cmr.main() == 1
     out = capsys.readouterr().out
-    for lang in ("ja", "uk", "vi", "zh"):
-        assert lang in out
+    for name in modules:
+        assert name in out

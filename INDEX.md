@@ -1,930 +1,399 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude How To" src="resources/logos/claude-howto-logo.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="resources/logos/kirocrew-howto-logo-dark.svg">
+  <img alt="Kiro Crew How To" src="resources/logos/kirocrew-howto-logo.svg">
 </picture>
 
-# Claude Code Examples - Complete Index
+# Index
 
-This document provides a complete index of all example files organized by feature type.
+Every file in Kiro Crew How To, grouped by folder. Start with the [README](README.md); learn the words in the [glossary](GLOSSARY.md).
 
-## Summary Statistics
+## Table of contents
 
-- **Total Files**: 100+ files
-- **Categories**: 10 feature categories
-- **Plugins**: 3 complete plugins
-- **Skills**: 6 complete skills
-- **Hooks**: 11 example hooks
-- **Ready to Use**: All examples
+- [Top-level guides](#top-level-guides)
+- [Module 0: What is an AI agent?](#module-0-what-is-an-ai-agent)
+- [Module 1: Get it running and say hello](#module-1-get-it-running-and-say-hello)
+- [Module 2: Decide how often it asks first](#module-2-decide-how-often-it-asks-first)
+- [Module 3: Keep chats tidy and pick up where you left off](#module-3-keep-chats-tidy-and-pick-up-where-you-left-off)
+- [Module 4: Make it remember you, or not](#module-4-make-it-remember-you-or-not)
+- [Module 5: Fix a mistake](#module-5-fix-a-mistake)
+- [Module 6: Standing rules and reusable prompts](#module-6-standing-rules-and-reusable-prompts)
+- [Module 7: Teach it a procedure: skills](#module-7-teach-it-a-procedure-skills)
+- [Module 8: Ask about your own documents](#module-8-ask-about-your-own-documents)
+- [Module 9: Protect your secrets and your files](#module-9-protect-your-secrets-and-your-files)
+- [Module 10: Connect your tools](#module-10-connect-your-tools)
+- [Module 11: Let it use a website](#module-11-let-it-use-a-website)
+- [Module 12: Get a daily summary](#module-12-get-a-daily-summary)
+- [Module 13: Tell me when something changes](#module-13-tell-me-when-something-changes)
+- [Module 14: Reach it from your phone or chat app](#module-14-reach-it-from-your-phone-or-chat-app)
+- [Module 15: Many tasks at once](#module-15-many-tasks-at-once)
+- [Module 16: Work while you're away](#module-16-work-while-youre-away)
+- [Module 17: Long jobs that can restart from a step](#module-17-long-jobs-that-can-restart-from-a-step)
+- [Module 18: Keep and improve what it made](#module-18-keep-and-improve-what-it-made)
+- [Module 19: Named specialists with their own memory](#module-19-named-specialists-with-their-own-memory)
+- [Module 20: Your own automatic checks: hooks](#module-20-your-own-automatic-checks-hooks)
+- [Module 21: Let another program start a job](#module-21-let-another-program-start-a-job)
+- [Module 22: Build a small app](#module-22-build-a-small-app)
+- [Module 23: Back up, move, or host it](#module-23-back-up-move-or-host-it)
+- [Capstone: My morning desk](#capstone-my-morning-desk)
+- [Built-in skills](#built-in-skills)
+- [Progress tracker](#progress-tracker)
+- [Brand assets](#brand-assets)
+- [Tooling](#tooling)
+
+## Top-level guides
+
+| File | What it is |
+|---|---|
+| [README.md](README.md) | Start here: who this is for, quick start, the modules |
+| [LEARNING-ROADMAP.md](LEARNING-ROADMAP.md) | Levels, what each module needs first, checkpoints |
+| [QUICK_REFERENCE.md](QUICK_REFERENCE.md) | One page of commands, labels and file locations |
+| [GLOSSARY.md](GLOSSARY.md) | Every term, one line each |
+| [COMING_FROM_CLAUDE_CODE.md](COMING_FROM_CLAUDE_CODE.md) | Claude Code ideas mapped to Kiro Crew tools |
+| [kirocrew_concepts_guide.md](kirocrew_concepts_guide.md) | How the parts of Kiro Crew fit together |
+| [CATALOG.md](CATALOG.md) | Every feature, its surface and module |
+| [INDEX.md](INDEX.md) | This file |
+| [resources.md](resources.md) | Official docs and further reading |
+| [clean-code-rules.md](clean-code-rules.md) | Clean-code rules a reviewer skill or agent can use |
+| [STYLE_GUIDE.md](STYLE_GUIDE.md) | How to write and format pages |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute |
+| [AGENTS.md](AGENTS.md) | Instructions for AI agents working in this repo |
+| [CHANGELOG.md](CHANGELOG.md) | What changed |
+| [SECURITY.md](SECURITY.md) | Security policy |
+| [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) | Code of conduct |
+| [LICENSE](LICENSE) | MIT License |
+
+## Module 0: What is an AI agent?
+
+| File | What it is |
+|---|---|
+| [00-what-is-an-agent/README.md](00-what-is-an-agent/README.md) | What is an AI agent? |
+| [00-what-is-an-agent/sample-transcript.md](00-what-is-an-agent/sample-transcript.md) | Sample chat: spot the tool call and the guess |
+| [00-what-is-an-agent/three-prompts-worksheet.md](00-what-is-an-agent/three-prompts-worksheet.md) | Three prompts worksheet |
+
+## Module 1: Get it running and say hello
+
+| File | What it is |
+|---|---|
+| [01-getting-started/README.md](01-getting-started/README.md) | Get it running and say hello |
+| [01-getting-started/first-prompts.md](01-getting-started/first-prompts.md) | First prompts to try |
+
+## Module 2: Decide how often it asks first
+
+| File | What it is |
+|---|---|
+| [02-approval-modes/README.md](02-approval-modes/README.md) | Decide how often it asks first |
+
+## Module 3: Keep chats tidy and pick up where you left off
+
+| File | What it is |
+|---|---|
+| [03-sessions/README.md](03-sessions/README.md) | Keep chats tidy and pick up where you left off |
+
+## Module 4: Make it remember you, or not
+
+| File | What it is |
+|---|---|
+| [04-memory/README.md](04-memory/README.md) | Make it remember you, or not |
+| [04-memory/remember-examples.md](04-memory/remember-examples.md) | Lines that make the agent remember you |
+
+## Module 5: Fix a mistake
+
+| File | What it is |
+|---|---|
+| [05-fix-a-mistake/README.md](05-fix-a-mistake/README.md) | Fix a mistake |
+| [05-fix-a-mistake/fix-examples.md](05-fix-a-mistake/fix-examples.md) | Fix examples: one for each kind of mistake |
+
+## Module 6: Standing rules and reusable prompts
+
+| File | What it is |
+|---|---|
+| [06-prompts-and-steering/README.md](06-prompts-and-steering/README.md) | Standing rules and reusable prompts |
+| [06-prompts-and-steering/prompts/doc-refactor.md](06-prompts-and-steering/prompts/doc-refactor.md) | Reorganize a project's documentation so it is easier to follow |
+| [06-prompts-and-steering/prompts/generate-api-docs.md](06-prompts-and-steering/prompts/generate-api-docs.md) | Write API documentation from the source code |
+| [06-prompts-and-steering/prompts/optimize.md](06-prompts-and-steering/prompts/optimize.md) | Review code for performance problems and suggest fixes |
+| [06-prompts-and-steering/prompts/unit-test-expand.md](06-prompts-and-steering/prompts/unit-test-expand.md) | Add unit tests for code paths that have no tests yet |
+| [06-prompts-and-steering/prompts/weekly-notes.md](06-prompts-and-steering/prompts/weekly-notes.md) | Summarize this week's notes into five bullets |
+| [06-prompts-and-steering/steering/api.md](06-prompts-and-steering/steering/api.md) | API rules |
+| [06-prompts-and-steering/steering/dates.md](06-prompts-and-steering/steering/dates.md) | Dates |
+| [06-prompts-and-steering/steering/personal.md](06-prompts-and-steering/steering/personal.md) | My personal working rules |
+| [06-prompts-and-steering/steering/project.md](06-prompts-and-steering/steering/project.md) | Project rules: Shop Demo |
+
+## Module 7: Teach it a procedure: skills
+
+| File | What it is |
+|---|---|
+| [07-skills/README.md](07-skills/README.md) | Teach it a procedure: skills |
+| [07-skills/.gitignore](07-skills/.gitignore) | Git ignore rules |
+| [07-skills/blog-draft/SKILL.md](07-skills/blog-draft/SKILL.md) | Skill `blog-draft` |
+| [07-skills/blog-draft/templates/draft-template.md](07-skills/blog-draft/templates/draft-template.md) | [Blog Post Title] |
+| [07-skills/blog-draft/templates/outline-template.md](07-skills/blog-draft/templates/outline-template.md) | Blog Post Outline: [Title] |
+| [07-skills/brand-voice/SKILL.md](07-skills/brand-voice/SKILL.md) | Skill `brand-voice` |
+| [07-skills/brand-voice/templates/email-template.txt](07-skills/brand-voice/templates/email-template.txt) | Text file |
+| [07-skills/brand-voice/templates/social-post-template.txt](07-skills/brand-voice/templates/social-post-template.txt) | Text file |
+| [07-skills/brand-voice/tone-examples.md](07-skills/brand-voice/tone-examples.md) | Brand Voice Tone Examples |
+| [07-skills/code-review-specialist/SKILL.md](07-skills/code-review-specialist/SKILL.md) | Skill `code-review-specialist` |
+| [07-skills/code-review-specialist/scripts/analyze-metrics.py](07-skills/code-review-specialist/scripts/analyze-metrics.py) | Python script |
+| [07-skills/code-review-specialist/scripts/compare-complexity.py](07-skills/code-review-specialist/scripts/compare-complexity.py) | Python script |
+| [07-skills/code-review-specialist/templates/finding-template.md](07-skills/code-review-specialist/templates/finding-template.md) | Code Review Finding Template |
+| [07-skills/code-review-specialist/templates/review-checklist.md](07-skills/code-review-specialist/templates/review-checklist.md) | Code Review Checklist |
+| [07-skills/commit/SKILL.md](07-skills/commit/SKILL.md) | Skill `commit` |
+| [07-skills/doc-generator/SKILL.md](07-skills/doc-generator/SKILL.md) | Skill `doc-generator` |
+| [07-skills/doc-generator/generate-docs.py](07-skills/doc-generator/generate-docs.py) | Python script |
+| [07-skills/pr/SKILL.md](07-skills/pr/SKILL.md) | Skill `pr` |
+| [07-skills/refactor/SKILL.md](07-skills/refactor/SKILL.md) | Skill `refactor` |
+| [07-skills/refactor/references/code-smells.md](07-skills/refactor/references/code-smells.md) | Code Smells Catalog |
+| [07-skills/refactor/references/refactoring-catalog.md](07-skills/refactor/references/refactoring-catalog.md) | Refactoring Catalog |
+| [07-skills/refactor/scripts/analyze-complexity.py](07-skills/refactor/scripts/analyze-complexity.py) | Python script |
+| [07-skills/refactor/scripts/detect-smells.py](07-skills/refactor/scripts/detect-smells.py) | Python script |
+| [07-skills/refactor/templates/refactoring-plan.md](07-skills/refactor/templates/refactoring-plan.md) | Refactoring Plan Template |
+| [07-skills/setup-ci-cd/SKILL.md](07-skills/setup-ci-cd/SKILL.md) | Skill `setup-ci-cd` |
+| [07-skills/templates/SKILL-template.md](07-skills/templates/SKILL-template.md) | Say in one sentence what this skill does and when the agent should use it |
+| [07-skills/trip-packing/SKILL.md](07-skills/trip-packing/SKILL.md) | Skill `trip-packing` |
+| [07-skills/weekly-notes/SKILL.md](07-skills/weekly-notes/SKILL.md) | Skill `weekly-notes` |
+
+## Module 8: Ask about your own documents
+
+| File | What it is |
+|---|---|
+| [08-knowledge-library/README.md](08-knowledge-library/README.md) | Ask about your own documents |
+| [08-knowledge-library/recipes/overnight-oats.md](08-knowledge-library/recipes/overnight-oats.md) | Overnight oats |
+| [08-knowledge-library/recipes/pancakes.md](08-knowledge-library/recipes/pancakes.md) | Pancakes |
+| [08-knowledge-library/recipes/roast-chicken.md](08-knowledge-library/recipes/roast-chicken.md) | Roast chicken |
+| [08-knowledge-library/recipes/stir-fry.md](08-knowledge-library/recipes/stir-fry.md) | Vegetable stir-fry |
+| [08-knowledge-library/recipes/tomato-soup.md](08-knowledge-library/recipes/tomato-soup.md) | Tomato soup |
+
+## Module 9: Protect your secrets and your files
+
+| File | What it is |
+|---|---|
+| [09-protect-secrets-and-files/README.md](09-protect-secrets-and-files/README.md) | Protect your secrets and your files |
+| [09-protect-secrets-and-files/keep-me/README.md](09-protect-secrets-and-files/keep-me/README.md) | keep-me |
+
+## Module 10: Connect your tools
+
+| File | What it is |
+|---|---|
+| [10-connections/README.md](10-connections/README.md) | Connect your tools |
+| [10-connections/database-mcp.json](10-connections/database-mcp.json) | JSON file |
+| [10-connections/filesystem-mcp.json](10-connections/filesystem-mcp.json) | JSON file |
+| [10-connections/github-mcp.json](10-connections/github-mcp.json) | JSON file |
+| [10-connections/multi-mcp.json](10-connections/multi-mcp.json) | JSON file |
+
+## Module 11: Let it use a website
+
+| File | What it is |
+|---|---|
+| [11-browser/README.md](11-browser/README.md) | Let it use a website |
+
+## Module 12: Get a daily summary
+
+| File | What it is |
+|---|---|
+| [12-scheduled-jobs/README.md](12-scheduled-jobs/README.md) | Get a daily summary |
+| [12-scheduled-jobs/notes/today.md](12-scheduled-jobs/notes/today.md) | Notes for today |
+
+## Module 13: Tell me when something changes
+
+| File | What it is |
+|---|---|
+| [13-monitors/README.md](13-monitors/README.md) | Tell me when something changes |
+
+## Module 14: Reach it from your phone or chat app
+
+| File | What it is |
+|---|---|
+| [14-phone-and-chat-apps/README.md](14-phone-and-chat-apps/README.md) | Reach it from your phone or chat app |
+
+## Module 15: Many tasks at once
+
+| File | What it is |
+|---|---|
+| [15-parallel-helpers/README.md](15-parallel-helpers/README.md) | Many tasks at once |
+
+## Module 16: Work while you're away
+
+| File | What it is |
+|---|---|
+| [16-task-runner/README.md](16-task-runner/README.md) | Work while you're away |
+| [16-task-runner/examples/TASK.md](16-task-runner/examples/TASK.md) | Task: Start a reading-list folder |
+| [16-task-runner/examples/two-item-TASK.md](16-task-runner/examples/two-item-TASK.md) | Task: Start a packing list |
+
+## Module 17: Long jobs that can restart from a step
+
+| File | What it is |
+|---|---|
+| [17-workflows/README.md](17-workflows/README.md) | Long jobs that can restart from a step |
+| [17-workflows/notes/bike.md](17-workflows/notes/bike.md) | Bike |
+| [17-workflows/notes/budget.md](17-workflows/notes/budget.md) | Budget |
+| [17-workflows/notes/garden.md](17-workflows/notes/garden.md) | Garden |
+| [17-workflows/notes/kitchen.md](17-workflows/notes/kitchen.md) | Kitchen |
+| [17-workflows/notes/library.md](17-workflows/notes/library.md) | Library |
+
+## Module 18: Keep and improve what it made
+
+| File | What it is |
+|---|---|
+| [18-artifacts/README.md](18-artifacts/README.md) | Keep and improve what it made |
+| [18-artifacts/step-counts.csv](18-artifacts/step-counts.csv) | Sample data (CSV) |
+
+## Module 19: Named specialists with their own memory
+
+| File | What it is |
+|---|---|
+| [19-mates-and-agents/README.md](19-mates-and-agents/README.md) | Named specialists with their own memory |
+| [19-mates-and-agents/agents/clean-code-reviewer.json](19-mates-and-agents/agents/clean-code-reviewer.json) | JSON: Reviews code against clean-code principles: naming, small functions, single resp |
+| [19-mates-and-agents/agents/code-reviewer.json](19-mates-and-agents/agents/code-reviewer.json) | JSON: Reviews your latest code changes and lists problems by how much they matter. Rea |
+| [19-mates-and-agents/agents/data-scientist.json](19-mates-and-agents/agents/data-scientist.json) | JSON: Answers questions with data: writes SQL, runs it, and explains the results. |
+| [19-mates-and-agents/agents/debugger.json](19-mates-and-agents/agents/debugger.json) | JSON: Finds the root cause of an error or failing test and makes the smallest fix. |
+| [19-mates-and-agents/agents/documentation-writer.json](19-mates-and-agents/agents/documentation-writer.json) | JSON: Writes clear documentation: API references, how-to guides and changelog entries. |
+| [19-mates-and-agents/agents/implementation-agent.json](19-mates-and-agents/agents/implementation-agent.json) | JSON: Builds a feature from a written description: plans, writes code, adds tests and  |
+| [19-mates-and-agents/agents/performance-optimizer.json](19-mates-and-agents/agents/performance-optimizer.json) | JSON: Finds what makes code slow, fixes the biggest problem first, and measures the re |
+| [19-mates-and-agents/agents/plain-writer.json](19-mates-and-agents/agents/plain-writer.json) | JSON: Rewrites text in plain words and short sentences. Use when you want something ea |
+| [19-mates-and-agents/agents/secure-reviewer.json](19-mates-and-agents/agents/secure-reviewer.json) | JSON: Read-only security review. Finds vulnerabilities without running commands or cha |
+| [19-mates-and-agents/agents/test-engineer.json](19-mates-and-agents/agents/test-engineer.json) | JSON: Writes and runs tests for new or changed code. Use when a feature is added or co |
+
+## Module 20: Your own automatic checks: hooks
+
+| File | What it is |
+|---|---|
+| [20-hooks/README.md](20-hooks/README.md) | Your own automatic checks: hooks |
+| [20-hooks/post-tool-log.sh](20-hooks/post-tool-log.sh) | Shell script: keep a diary of the tool calls the agent makes. |
+| [20-hooks/stop-check-once.sh](20-hooks/stop-check-once.sh) | Shell script: ask the agent to check its work once more before it stops. |
+
+## Module 21: Let another program start a job
+
+| File | What it is |
+|---|---|
+| [21-webhooks/README.md](21-webhooks/README.md) | Let another program start a job |
+| [21-webhooks/post-job.sh](21-webhooks/post-job.sh) | Shell script: ask Kiro Crew to summarize a build log, the way a build server would. |
+
+## Module 22: Build a small app
+
+| File | What it is |
+|---|---|
+| [22-apps/README.md](22-apps/README.md) | Build a small app |
+| [22-apps/habit-tracker/README.md](22-apps/habit-tracker/README.md) | Habit Tracker (example app) |
+| [22-apps/habit-tracker/app.json](22-apps/habit-tracker/app.json) | JSON: List a few daily habits, get help choosing a new one, and get a reminder each mo |
+| [22-apps/habit-tracker/assets/icon.png](22-apps/habit-tracker/assets/icon.png) | Image |
+| [22-apps/habit-tracker/skills/add-habit/SKILL.md](22-apps/habit-tracker/skills/add-habit/SKILL.md) | Skill `add-habit` |
+| [22-apps/habit-tracker/ui/.gitignore](22-apps/habit-tracker/ui/.gitignore) | Git ignore rules |
+| [22-apps/habit-tracker/ui/package.json](22-apps/habit-tracker/ui/package.json) | JSON file |
+| [22-apps/habit-tracker/ui/src/App.tsx](22-apps/habit-tracker/ui/src/App.tsx) | TypeScript page |
+| [22-apps/habit-tracker/ui/vite.config.ts](22-apps/habit-tracker/ui/vite.config.ts) | TypeScript config |
+| [22-apps/import-demo/README.md](22-apps/import-demo/README.md) | Import demo: turn a plugin into an app |
+| [22-apps/import-demo/plugin.json](22-apps/import-demo/plugin.json) | JSON: Write a README and check documentation for problems. |
+| [22-apps/import-demo/skills/generate-readme/SKILL.md](22-apps/import-demo/skills/generate-readme/SKILL.md) | Skill `generate-readme` |
+| [22-apps/import-demo/skills/validate-docs/SKILL.md](22-apps/import-demo/skills/validate-docs/SKILL.md) | Skill `validate-docs` |
+
+## Module 23: Back up, move, or host it
+
+| File | What it is |
+|---|---|
+| [23-backup-and-hosting/README.md](23-backup-and-hosting/README.md) | Back up, move, or host it |
+
+## Capstone: My morning desk
+
+| File | What it is |
+|---|---|
+| [capstone-morning-desk/README.md](capstone-morning-desk/README.md) | Capstone: My morning desk |
+| [capstone-morning-desk/morning-brief/SKILL.md](capstone-morning-desk/morning-brief/SKILL.md) | Skill `morning-brief` |
+| [capstone-morning-desk/notes/home/2026-10-27.md](capstone-morning-desk/notes/home/2026-10-27.md) | Home notes, 2026-10-27 |
+| [capstone-morning-desk/notes/learning/2026-10-26.md](capstone-morning-desk/notes/learning/2026-10-26.md) | Learning notes, 2026-10-26 |
+| [capstone-morning-desk/notes/work/2026-10-28.md](capstone-morning-desk/notes/work/2026-10-28.md) | Work notes, 2026-10-28 |
+| [capstone-morning-desk/steering/briefing.md](capstone-morning-desk/steering/briefing.md) | Morning briefing rules |
+| [capstone-morning-desk/todo.md](capstone-morning-desk/todo.md) | To-do |
+
+## Built-in skills
+
+| File | What it is |
+|---|---|
+| [.kiro/skills/lesson-quiz/README.md](.kiro/skills/lesson-quiz/README.md) | Lesson quiz |
+| [.kiro/skills/lesson-quiz/SKILL.md](.kiro/skills/lesson-quiz/SKILL.md) | Skill `lesson-quiz` |
+| [.kiro/skills/lesson-quiz/references/question-bank.md](.kiro/skills/lesson-quiz/references/question-bank.md) | Lesson quiz: question bank |
+| [.kiro/skills/lesson-quiz/references/results-template.md](.kiro/skills/lesson-quiz/references/results-template.md) | Results report template |
+| [.kiro/skills/self-assessment/README.md](.kiro/skills/self-assessment/README.md) | Self-assessment and learning path |
+| [.kiro/skills/self-assessment/SKILL.md](.kiro/skills/self-assessment/SKILL.md) | Skill `self-assessment` |
+| [.kiro/skills/self-assessment/references/output-templates.md](.kiro/skills/self-assessment/references/output-templates.md) | Output templates |
+| [.kiro/skills/self-assessment/references/topic-recommendations.md](.kiro/skills/self-assessment/references/topic-recommendations.md) | Module recommendations |
+
+## Progress tracker
+
+| File | What it is |
+|---|---|
+| [local-progress/index.html](local-progress/index.html) | Progress tracker page (open in a browser) |
+
+## Brand assets
+
+| File | What it is |
+|---|---|
+| [resources/DESIGN-SYSTEM.md](resources/DESIGN-SYSTEM.md) | Kiro Crew How To - Design System |
+| [resources/INDEX.txt](resources/INDEX.txt) | Text file |
+| [resources/MANIFEST.txt](resources/MANIFEST.txt) | Text file |
+| [resources/QUICK-START.md](resources/QUICK-START.md) | Quick Start - Brand Assets |
+| [resources/README.md](resources/README.md) | Kiro Crew How To - Brand Assets |
+| [resources/favicons/favicon-128.svg](resources/favicons/favicon-128.svg) | SVG image |
+| [resources/favicons/favicon-16.svg](resources/favicons/favicon-16.svg) | SVG image |
+| [resources/favicons/favicon-256.svg](resources/favicons/favicon-256.svg) | SVG image |
+| [resources/favicons/favicon-32.svg](resources/favicons/favicon-32.svg) | SVG image |
+| [resources/favicons/favicon-64.svg](resources/favicons/favicon-64.svg) | SVG image |
+| [resources/icons/kirocrew-howto-icon-dark.svg](resources/icons/kirocrew-howto-icon-dark.svg) | SVG image |
+| [resources/icons/kirocrew-howto-icon.svg](resources/icons/kirocrew-howto-icon.svg) | SVG image |
+| [resources/logos/kirocrew-howto-logo-dark.svg](resources/logos/kirocrew-howto-logo-dark.svg) | SVG image |
+| [resources/logos/kirocrew-howto-logo.svg](resources/logos/kirocrew-howto-logo.svg) | SVG image |
+| [kirocrew-howto-logo.svg](kirocrew-howto-logo.svg) | SVG image |
+
+## Tooling
+
+| File | What it is |
+|---|---|
+| [.cspell.json](.cspell.json) | JSON file |
+| [.github/FUNDING.yml](.github/FUNDING.yml) | YAML config |
+| [.github/ISSUE_TEMPLATE/bug_report.md](.github/ISSUE_TEMPLATE/bug_report.md) | Markdown page |
+| [.github/ISSUE_TEMPLATE/config.yml](.github/ISSUE_TEMPLATE/config.yml) | YAML config |
+| [.github/ISSUE_TEMPLATE/documentation.md](.github/ISSUE_TEMPLATE/documentation.md) | Markdown page |
+| [.github/ISSUE_TEMPLATE/feature_request.md](.github/ISSUE_TEMPLATE/feature_request.md) | Markdown page |
+| [.github/ISSUE_TEMPLATE/question.md](.github/ISSUE_TEMPLATE/question.md) | Markdown page |
+| [.github/SECURITY_REPORTING.md](.github/SECURITY_REPORTING.md) | Security Vulnerability Reporting |
+| [.github/TESTING.md](.github/TESTING.md) | Testing Guide |
+| [.github/markdown-link-check-config.json](.github/markdown-link-check-config.json) | JSON file |
+| [.github/pull_request_template.md](.github/pull_request_template.md) | Markdown page |
+| [.github/workflows/docs-check.yml](.github/workflows/docs-check.yml) | YAML config |
+| [.github/workflows/pages.yml](.github/workflows/pages.yml) | YAML config |
+| [.github/workflows/release.yml](.github/workflows/release.yml) | YAML config |
+| [.github/workflows/test.yml](.github/workflows/test.yml) | YAML config |
+| [.gitignore](.gitignore) | Git ignore rules |
+| [.idd.yml](.idd.yml) | YAML config |
+| [.markdownlint.json](.markdownlint.json) | JSON file |
+| [.pre-commit-config.yaml](.pre-commit-config.yaml) | YAML config |
+| [scripts/README.md](scripts/README.md) | Build Scripts |
+| [scripts/build_website.py](scripts/build_website.py) | Python script |
+| [scripts/check_cross_references.py](scripts/check_cross_references.py) | Python script |
+| [scripts/check_links.py](scripts/check_links.py) | Python script |
+| [scripts/check_markdown_rendering.py](scripts/check_markdown_rendering.py) | Python script |
+| [scripts/check_mermaid.py](scripts/check_mermaid.py) | Python script |
+| [scripts/pele_render.mjs](scripts/pele_render.mjs) | JavaScript helper |
+| [scripts/pele_renderer.py](scripts/pele_renderer.py) | Python script |
+| [scripts/pyproject.toml](scripts/pyproject.toml) | Python project config |
+| [scripts/requirements-dev.txt](scripts/requirements-dev.txt) | Text file |
+| [scripts/requirements.txt](scripts/requirements.txt) | Text file |
+| [scripts/tests/__init__.py](scripts/tests/__init__.py) | Python script |
+| [scripts/tests/conftest.py](scripts/tests/conftest.py) | Python script |
+| [scripts/tests/test_build_website.py](scripts/tests/test_build_website.py) | Python script |
+| [scripts/tests/test_check_cross_references.py](scripts/tests/test_check_cross_references.py) | Python script |
+| [scripts/tests/test_check_markdown_rendering.py](scripts/tests/test_check_markdown_rendering.py) | Python script |
+| [scripts/tests/test_check_mermaid.py](scripts/tests/test_check_mermaid.py) | Python script |
+| [scripts/tests/test_pele_renderer.py](scripts/tests/test_pele_renderer.py) | Python script |
+| [scripts/vendor_assets.py](scripts/vendor_assets.py) | Python script |
+| [scripts/website_templates/landing.css](scripts/website_templates/landing.css) | Stylesheet |
+| [scripts/website_templates/landing.html.j2](scripts/website_templates/landing.html.j2) | Jinja2 page template |
+| [scripts/website_templates/landing.js](scripts/website_templates/landing.js) | JavaScript |
+| [scripts/website_templates/page.html.j2](scripts/website_templates/page.html.j2) | Jinja2 page template |
+| [scripts/website_templates/roadmap.json](scripts/website_templates/roadmap.json) | JSON file |
+| [scripts/website_templates/site.css](scripts/website_templates/site.css) | Stylesheet |
+| [scripts/website_templates/tailwind.config.js](scripts/website_templates/tailwind.config.js) | JavaScript |
+| [scripts/website_templates/tailwind.input.css](scripts/website_templates/tailwind.input.css) | Stylesheet |
 
 ---
-
-## 01. Slash Commands (10 files)
-
-User-invoked shortcuts for common workflows.
-
-| File | Description | Use Case |
-|------|-------------|----------|
-| `optimize.md` | Code optimization analyzer | Find performance issues |
-| `pr.md` | Pull request preparation | PR workflow automation |
-| `generate-api-docs.md` | API documentation generator | Generate API docs |
-| `commit.md` | Commit message helper | Standardized commits |
-| `setup-ci-cd.md` | CI/CD pipeline setup | DevOps automation |
-| `push-all.md` | Push all changes | Quick push workflow |
-| `unit-test-expand.md` | Expand unit test coverage | Test automation |
-| `doc-refactor.md` | Documentation refactoring | Doc improvements |
-| `pr-slash-command.png` | Screenshot example | Visual reference |
-| `README.md` | Documentation | Setup and usage guide |
-
-**Installation Path**: `.claude/commands/`
-
-**Usage**: `/optimize`, `/pr`, `/generate-api-docs`, `/commit`, `/setup-ci-cd`, `/push-all`, `/unit-test-expand`, `/doc-refactor`
-
----
-
-## 02. Memory (6 files)
-
-Persistent context and project standards.
-
-| File | Description | Scope | Location |
-|------|-------------|-------|----------|
-| `project-CLAUDE.md` | Team project standards | Project-wide | `./CLAUDE.md` |
-| `directory-api-CLAUDE.md` | API-specific rules | Directory | `./src/api/CLAUDE.md` |
-| `personal-CLAUDE.md` | Personal preferences | User | `~/.claude/CLAUDE.md` |
-| `memory-saved.png` | Screenshot: memory saved | - | Visual reference |
-| `memory-ask-claude.png` | Screenshot: ask Claude | - | Visual reference |
-| `README.md` | Documentation | - | Reference |
-
-**Installation**: Copy to appropriate location
-
-**Usage**: Automatically loaded by Claude
-
-**AGENTS.md** (v2.1.277): read as project instructions when no `CLAUDE.md`, `.claude/CLAUDE.md` or `CLAUDE.local.md` exists at or above the working directory — see `02-memory/README.md#agentsmd`
-
----
-
-## 03. Skills (23 files)
-
-Auto-invoked capabilities with scripts and templates.
-
-### Code Review Skill (5 files)
-```
-code-review-specialist/
-├── SKILL.md                          # Skill definition
-├── scripts/
-│   ├── analyze-metrics.py            # Code metrics analyzer
-│   └── compare-complexity.py         # Complexity comparison
-└── templates/
-    ├── review-checklist.md           # Review checklist
-    └── finding-template.md           # Finding documentation
-```
-
-**Purpose**: Comprehensive code review with security, performance, and quality analysis
-
-**Auto-invoked**: When reviewing code
-
----
-
-### Brand Voice Skill (4 files)
-```
-brand-voice/
-├── SKILL.md                          # Skill definition
-├── templates/
-│   ├── email-template.txt            # Email format
-│   └── social-post-template.txt      # Social media format
-└── tone-examples.md                  # Example messages
-```
-
-**Purpose**: Ensure consistent brand voice in communications
-
-**Auto-invoked**: When creating marketing copy
-
----
-
-### Documentation Generator Skill (2 files)
-```
-doc-generator/
-├── SKILL.md                          # Skill definition
-└── generate-docs.py                  # Python doc extractor
-```
-
-**Purpose**: Generate comprehensive API documentation from source code
-
-**Auto-invoked**: When creating/updating API documentation
-
----
-
-### Refactor Skill (5 files)
-```
-refactor/
-├── SKILL.md                          # Skill definition
-├── scripts/
-│   ├── analyze-complexity.py         # Complexity analyzer
-│   └── detect-smells.py              # Code smell detector
-├── references/
-│   ├── code-smells.md                # Code smells catalog
-│   └── refactoring-catalog.md        # Refactoring patterns
-└── templates/
-    └── refactoring-plan.md           # Refactoring plan template
-```
-
-**Purpose**: Systematic code refactoring with complexity analysis
-
-**Auto-invoked**: When refactoring code
-
----
-
-### Claude MD Skill (1 file)
-```
-claude-md/
-└── SKILL.md                          # Skill definition
-```
-
-**Purpose**: Manage and optimize CLAUDE.md files
-
----
-
-### Blog Draft Skill (3 files)
-```
-blog-draft/
-├── SKILL.md                          # Skill definition
-└── templates/
-    ├── draft-template.md             # Blog draft template
-    └── outline-template.md           # Blog outline template
-```
-
-**Purpose**: Draft blog posts with consistent structure
-
-**Plus**: `README.md` - Skills overview and usage guide
-
-**Installation Path**: `~/.claude/skills/` or `.claude/skills/`
-
----
-
-## 04. Subagents (10 files)
-
-Specialized AI assistants with custom capabilities.
-
-| File | Description | Tools | Use Case |
-|------|-------------|-------|----------|
-| `code-reviewer.md` | Code quality analysis | Read, Grep, Glob, Bash | Comprehensive reviews |
-| `test-engineer.md` | Test coverage analysis | Read, Write, Bash, Grep | Test automation |
-| `documentation-writer.md` | Documentation creation | Read, Write, Grep | Doc generation |
-| `secure-reviewer.md` | Security review (read-only) | Read, Grep | Security audits |
-| `implementation-agent.md` | Full implementation | Read, Write, Edit, Bash, Grep, Glob | Feature development |
-| `debugger.md` | Debugging specialist | Read, Edit, Bash, Grep, Glob | Bug investigation |
-| `data-scientist.md` | Data analysis specialist | Bash, Read, Write | Data workflows |
-| `clean-code-reviewer.md` | Clean code standards | Read, Grep, Glob, Bash | Code quality |
-| `performance-optimizer.md` | Performance bottleneck analysis | Read, Edit, Bash, Grep, Glob | Optimization work |
-| `README.md` | Documentation | - | Setup and usage guide |
-
-**Installation Path**: `.claude/agents/`
-
-**Usage**: Automatically delegated by main agent
-
----
-
-## 05. MCP Protocol (5 files)
-
-External tool and API integrations.
-
-| File | Description | Integrates With | Use Case |
-|------|-------------|-----------------|----------|
-| `github-mcp.json` | GitHub integration | GitHub API | PR/issue management |
-| `database-mcp.json` | Database queries | PostgreSQL/MySQL | Live data queries |
-| `filesystem-mcp.json` | File operations | Local filesystem | File management |
-| `multi-mcp.json` | Multiple servers | GitHub + DB + Slack | Complete integration |
-| `README.md` | Documentation | - | Setup and usage guide |
-
-**Installation Path**: `.mcp.json` (project scope) or `~/.claude.json` (user scope)
-
-**Usage**: `/mcp__github__list_prs`, etc.
-
----
-
-## 06. Hooks (12 files)
-
-Event-driven automation scripts that execute automatically.
-
-| File | Description | Event | Use Case |
-|------|-------------|-------|----------|
-| `format-code.sh` | Auto-format code | PostToolUse (matcher: Write) | Code formatting |
-| `pre-commit.sh` | Run tests before commit | PreToolUse (matcher: Bash) | Test automation |
-| `pre-tool-check.sh` | Validate and audit commands before they run | PreToolUse (matcher: Bash) | Guardrails, audit log |
-| `security-scan.sh` | Security scanning | PostToolUse (matcher: Write) | Security checks |
-| `dependency-check.sh` | Scan dependency manifests for vulnerabilities | PostToolUse (matcher: Write) | Supply-chain checks |
-| `log-bash.sh` | Log bash commands | PostToolUse (matcher: Bash) | Command logging |
-| `notify-team.sh` | Send notifications | PostToolUse (matcher: Bash) | Team notifications |
-| `validate-prompt.sh` | Validate prompts | UserPromptSubmit | Input validation |
-| `session-end.sh` | Capture progress when a session ends | SessionEnd | Progress tracking |
-| `context-tracker.py` | Track context window usage | UserPromptSubmit, Stop | Context monitoring |
-| `context-tracker-tiktoken.py` | Token-based context tracking | UserPromptSubmit, Stop | Precise token counting |
-| `README.md` | Documentation | - | Setup and usage guide |
-
-**Installation Path**: Configure in `~/.claude/settings.json`
-
-**Usage**: Configured in settings, executed automatically
-
-**Hook Types** (5): `command`, `http`, `prompt`, `mcp_tool`, `agent` — how a hook runs.
-
-**Hook Events** (33, in 4 categories) — when it runs:
-- Tool Hooks: PreToolUse, PostToolUse, PostToolUseFailure, PostToolBatch, PermissionRequest, PermissionDenied
-- Session Hooks: SessionStart, Setup, SessionEnd, Stop, StopFailure, SubagentStart, SubagentStop
-- Task Hooks: UserPromptSubmit, UserPromptExpansion, MessageDisplay, TaskCompleted, TaskCreated, TeammateIdle (TaskCompleted/TaskCreated only fire when the todo tools are enabled — available by default only on Claude 3.x models, Opus 4 through 4.7, Sonnet 4 through 4.6, and Haiku 4.5)
-- Lifecycle Hooks: ConfigChange, CwdChanged, DirectoryAdded, FileChanged, PreCompact, PostCompact, PreModelSwitch, PostModelSwitch, WorktreeCreate, WorktreeRemove, Notification, InstructionsLoaded, Elicitation, ElicitationResult
-
----
-
-## 07. Plugins (3 complete plugins, 39 files)
-
-Bundled collections of features.
-
-### PR Review Plugin (10 files)
-```
-pr-review/
-├── .claude-plugin/
-│   └── plugin.json                   # Plugin manifest
-├── commands/
-│   ├── review-pr.md                  # Comprehensive review
-│   ├── check-security.md             # Security check
-│   └── check-tests.md                # Test coverage check
-├── agents/
-│   ├── security-reviewer.md          # Security specialist
-│   ├── test-checker.md               # Test specialist
-│   └── performance-analyzer.md       # Performance specialist
-├── mcp/
-│   └── github-config.json            # GitHub integration
-├── hooks/
-│   └── pre-review.js                 # Pre-review validation
-└── README.md                         # Plugin documentation
-```
-
-**Features**: Security analysis, test coverage, performance impact
-
-**Commands**: `/review-pr`, `/check-security`, `/check-tests`
-
-**Installation**: `claude --plugin-dir ./07-plugins/pr-review` (from the repo root)
-
----
-
-### DevOps Automation Plugin (15 files)
-```
-devops-automation/
-├── .claude-plugin/
-│   └── plugin.json                   # Plugin manifest
-├── commands/
-│   ├── deploy.md                     # Deployment
-│   ├── rollback.md                   # Rollback
-│   ├── status.md                     # System status
-│   └── incident.md                   # Incident response
-├── agents/
-│   ├── deployment-specialist.md      # Deployment expert
-│   ├── incident-commander.md         # Incident coordinator
-│   └── alert-analyzer.md             # Alert analyzer
-├── mcp/
-│   └── kubernetes-config.json        # Kubernetes integration
-├── hooks/
-│   ├── pre-deploy.js                 # Pre-deployment checks
-│   └── post-deploy.js                # Post-deployment tasks
-├── scripts/
-│   ├── deploy.sh                     # Deployment automation
-│   ├── rollback.sh                   # Rollback automation
-│   └── health-check.sh               # Health checks
-└── README.md                         # Plugin documentation
-```
-
-**Features**: Kubernetes deployment, rollback, monitoring, incident response
-
-**Commands**: `/deploy`, `/rollback`, `/status`, `/incident`
-
-**Installation**: `claude --plugin-dir ./07-plugins/devops-automation` (from the repo root)
-
----
-
-### Documentation Plugin (14 files)
-```
-documentation/
-├── .claude-plugin/
-│   └── plugin.json                   # Plugin manifest
-├── commands/
-│   ├── generate-api-docs.md          # API docs generation
-│   ├── generate-readme.md            # README creation
-│   ├── sync-docs.md                  # Doc synchronization
-│   └── validate-docs.md              # Doc validation
-├── agents/
-│   ├── api-documenter.md             # API doc specialist
-│   ├── code-commentator.md           # Code comment specialist
-│   └── example-generator.md          # Example creator
-├── mcp/
-│   └── github-docs-config.json       # GitHub integration
-├── templates/
-│   ├── api-endpoint.md               # API endpoint template
-│   ├── function-docs.md              # Function doc template
-│   └── adr-template.md               # ADR template
-└── README.md                         # Plugin documentation
-```
-
-**Features**: API docs, README generation, doc sync, validation
-
-**Commands**: `/generate-api-docs`, `/generate-readme`, `/sync-docs`, `/validate-docs`
-
-**Installation**: `claude --plugin-dir ./07-plugins/documentation` (from the repo root)
-
-**Plus**: `README.md` - Plugins overview and usage guide
-
----
-
-## 08. Checkpoints and Rewind (2 files)
-
-Save conversation state and explore alternative approaches.
-
-| File | Description | Content |
-|------|-------------|---------|
-| `README.md` | Documentation | Comprehensive checkpoint guide |
-| `checkpoint-examples.md` | Real-world examples | Database migration, performance optimization, UI iteration, debugging |
-| | | |
-
-**Key Concepts**:
-- **Checkpoint**: Snapshot of conversation state
-- **Rewind**: Return to previous checkpoint
-- **Branch Point**: Explore multiple approaches
-
-**Usage**:
-```
-# Checkpoints are created automatically with every user prompt
-# To rewind, press Esc twice or use:
-/rewind
-# Then choose: Restore code and conversation, Restore conversation,
-# Restore code, Summarize from here, Summarize up to here, or Never mind
-```
-
-**Use Cases**:
-- Try different implementations
-- Recover from mistakes
-- Safe experimentation
-- Compare solutions
-- A/B testing
-
----
-
-## 09. Advanced Features (4 files)
-
-Advanced capabilities for complex workflows.
-
-| File | Description | Features |
-|------|-------------|----------|
-| `README.md` | Complete guide | All advanced features documentation |
-| `config-examples.json` | Configuration examples | 10+ use-case-specific configurations |
-| `planning-mode-examples.md` | Planning examples | REST API, database migration, refactoring |
-| `setup-auto-mode-permissions.py` | Seed `permissions.allow` for auto mode | Idempotent, `--dry-run` and opt-in flags |
-| Dynamic Workflows | Deterministic multi-agent orchestration via `/workflows` (v2.1.154) | Comprehensive audits, migrations, scale-out |
-| Scheduled Tasks | Recurring session-scoped tasks with `/loop` and cron tools | Automated recurring workflows |
-| Chrome Integration | Browser automation in your own Chrome via the Claude in Chrome extension | Web testing and scraping |
-| Remote Control (expanded) | Connection methods, security, comparison table, device cards | Remote session management (no longer a research preview) |
-| Cross-Session Messaging | `SendMessage` / `ListAgents`, including `notify_when_idle` (v2.1.236) | Coordinating sessions on the same machine |
-| Keyboard Customization | Custom keybindings, chord support, contexts | Personalized shortcuts |
-| Desktop App (expanded) | Connectors, launch.json, enterprise features | Desktop integration |
-| | | |
-
-**Advanced Features Covered**:
-
-### Planning Mode
-- Create detailed implementation plans
-- Time estimates and risk assessment
-- Systematic task breakdown
-
-### Extended Thinking
-- Deep reasoning for complex problems
-- Architectural decision analysis
-- Trade-off evaluation
-
-### Background Tasks
-- Long-running operations without blocking
-- Parallel development workflows
-- Task management and monitoring
-
-### Dynamic Workflows (v2.1.154)
-- Deterministic orchestration of tens-to-hundreds of background subagents
-- Fan-out / pipeline / parallel stages for comprehensive coverage
-- View runs with `/workflows`; the Ultracode toggle in `/effort` (`/effort ultracode [on|off]`) turns it on for a session without changing the effort level (v2.1.284); the `ultracode` setting makes it persist
-- Default size guideline is medium (aim for fewer than 10 agents) as of v2.1.219 — change it with **Dynamic workflow size** in `/config`
-
-### Permission Modes
-- **manual**: Ask before anything beyond reads (shown as Manual since v2.1.200; config value is still `default`)
-- **acceptEdits**: Auto-accept file edits, ask for others
-- **plan**: Read-only analysis, no modifications
-- **auto**: Everything, with background safety checks — a classifier reviews commands and protected-directory writes (configured via the `autoMode` settings object)
-- **dontAsk**: Only pre-approved tools — auto-denies every call that would otherwise prompt. Claude runs only `permissions.allow` matches, read-only Bash commands, and calls approved by a `PreToolUse` hook
-- **bypassPermissions**: Accept all (enable with `--permission-mode bypassPermissions` or the equivalent `--dangerously-skip-permissions`)
-
-### Headless Mode (`claude -p`)
-- CI/CD integration
-- Automated task execution
-- Batch processing
-
-### Session Management
-- Multiple work sessions
-- Session switching and saving
-- Session persistence
-
-### Interactive Features
-- Keyboard shortcuts
-- Command history
-- Tab completion
-- Multi-line input
-
-### Configuration
-- Comprehensive settings management
-- Environment-specific configs
-- Per-project customization
-
-### Scheduled Tasks
-- Recurring session-scoped tasks with `/loop` command
-- Cron tools: CronCreate, CronList, CronDelete
-- Automated recurring workflows
-
-### Chrome Integration
-- Browser automation in your own Chrome via the Claude in Chrome extension
-- Web testing and scraping capabilities
-- Page interaction and data extraction
-
-### Remote Control (expanded)
-- Connection methods and protocols
-- Security considerations and best practices
-- Comparison table of remote access options
-- Out of research preview — a machine running `claude remote-control` appears as a device card in the Claude app's Code tab
-
-### Cross-Session Messaging
-- `SendMessage` between sessions on the same machine
-- `notify_when_idle` — one opt-in notice when the other session next goes idle (v2.1.236)
-- `ListAgents` reports the session's own name and lists live teammates (v2.1.239)
-
-### Keyboard Customization
-- Custom keybindings configuration
-- Chord support for multi-key shortcuts
-- Context-aware keybinding activation
-
-### Desktop App (expanded)
-- Connectors for IDE integration
-- launch.json configuration
-- Enterprise features and deployment
-
----
-
-## 10. CLI Usage (1 file)
-
-Command-line interface usage patterns and reference.
-
-| File | Description | Content |
-|------|-------------|---------|
-| `README.md` | CLI documentation | Flags, options, and usage patterns |
-
-**Key CLI Features**:
-- `claude` - Start interactive session
-- `claude -p "prompt"` - Headless/non-interactive mode
-- `claude --cloud "task"` - Start a cloud (web) session
-- `claude --model` - Select model (Opus 5.5, Sonnet 5.5, Opus 5, Sonnet 5, Sonnet 4.6, Opus 4.8, Haiku 5.5, Haiku 4.5)
-- `claude --permission-mode` - Set permission mode
-- `claude --remote-control` - Start a session you can also control from claude.ai or the Claude app
-
----
-
-## Documentation Files (13 files)
-
-| File | Location | Description |
-|------|----------|-------------|
-| `README.md` | `/` | Main examples overview |
-| `INDEX.md` | `/` | This complete index |
-| `QUICK_REFERENCE.md` | `/` | Quick reference card |
-| `README.md` | `/01-slash-commands/` | Slash commands guide |
-| `README.md` | `/02-memory/` | Memory guide |
-| `README.md` | `/03-skills/` | Skills guide |
-| `README.md` | `/04-subagents/` | Subagents guide |
-| `README.md` | `/05-mcp/` | MCP guide |
-| `README.md` | `/06-hooks/` | Hooks guide |
-| `README.md` | `/07-plugins/` | Plugins guide |
-| `README.md` | `/08-checkpoints/` | Checkpoints guide |
-| `README.md` | `/09-advanced-features/` | Advanced features guide |
-| `README.md` | `/10-cli/` | CLI guide |
-
----
-
-## Complete File Tree
-
-```
-claude-howto/
-├── README.md                                    # Main overview
-├── INDEX.md                                     # This file
-├── QUICK_REFERENCE.md                           # Quick reference card
-├── claude_concepts_guide.md                     # Original guide
-│
-├── 01-slash-commands/                           # Slash Commands
-│   ├── optimize.md
-│   ├── pr.md
-│   ├── generate-api-docs.md
-│   ├── commit.md
-│   ├── setup-ci-cd.md
-│   ├── push-all.md
-│   ├── unit-test-expand.md
-│   ├── doc-refactor.md
-│   ├── pr-slash-command.png
-│   └── README.md
-│
-├── 02-memory/                                   # Memory
-│   ├── project-CLAUDE.md
-│   ├── directory-api-CLAUDE.md
-│   ├── personal-CLAUDE.md
-│   ├── memory-saved.png
-│   ├── memory-ask-claude.png
-│   └── README.md
-│
-├── 03-skills/                                   # Skills
-│   ├── code-review-specialist/
-│   │   ├── SKILL.md
-│   │   ├── scripts/
-│   │   │   ├── analyze-metrics.py
-│   │   │   └── compare-complexity.py
-│   │   └── templates/
-│   │       ├── review-checklist.md
-│   │       └── finding-template.md
-│   ├── brand-voice/
-│   │   ├── SKILL.md
-│   │   ├── templates/
-│   │   │   ├── email-template.txt
-│   │   │   └── social-post-template.txt
-│   │   └── tone-examples.md
-│   ├── doc-generator/
-│   │   ├── SKILL.md
-│   │   └── generate-docs.py
-│   ├── refactor/
-│   │   ├── SKILL.md
-│   │   ├── scripts/
-│   │   │   ├── analyze-complexity.py
-│   │   │   └── detect-smells.py
-│   │   ├── references/
-│   │   │   ├── code-smells.md
-│   │   │   └── refactoring-catalog.md
-│   │   └── templates/
-│   │       └── refactoring-plan.md
-│   ├── claude-md/
-│   │   └── SKILL.md
-│   ├── blog-draft/
-│   │   ├── SKILL.md
-│   │   └── templates/
-│   │       ├── draft-template.md
-│   │       └── outline-template.md
-│   └── README.md
-│
-├── 04-subagents/                                # Subagents
-│   ├── code-reviewer.md
-│   ├── test-engineer.md
-│   ├── documentation-writer.md
-│   ├── secure-reviewer.md
-│   ├── implementation-agent.md
-│   ├── debugger.md
-│   ├── data-scientist.md
-│   ├── clean-code-reviewer.md
-│   └── README.md
-│
-├── 05-mcp/                                      # MCP Protocol
-│   ├── github-mcp.json
-│   ├── database-mcp.json
-│   ├── filesystem-mcp.json
-│   ├── multi-mcp.json
-│   └── README.md
-│
-├── 06-hooks/                                    # Hooks
-│   ├── format-code.sh
-│   ├── pre-commit.sh
-│   ├── security-scan.sh
-│   ├── log-bash.sh
-│   ├── validate-prompt.sh
-│   ├── notify-team.sh
-│   ├── context-tracker.py
-│   ├── context-tracker-tiktoken.py
-│   └── README.md
-│
-├── 07-plugins/                                  # Plugins
-│   ├── pr-review/
-│   │   ├── .claude-plugin/
-│   │   │   └── plugin.json
-│   │   ├── commands/
-│   │   │   ├── review-pr.md
-│   │   │   ├── check-security.md
-│   │   │   └── check-tests.md
-│   │   ├── agents/
-│   │   │   ├── security-reviewer.md
-│   │   │   ├── test-checker.md
-│   │   │   └── performance-analyzer.md
-│   │   ├── mcp/
-│   │   │   └── github-config.json
-│   │   ├── hooks/
-│   │   │   └── pre-review.js
-│   │   └── README.md
-│   ├── devops-automation/
-│   │   ├── .claude-plugin/
-│   │   │   └── plugin.json
-│   │   ├── commands/
-│   │   │   ├── deploy.md
-│   │   │   ├── rollback.md
-│   │   │   ├── status.md
-│   │   │   └── incident.md
-│   │   ├── agents/
-│   │   │   ├── deployment-specialist.md
-│   │   │   ├── incident-commander.md
-│   │   │   └── alert-analyzer.md
-│   │   ├── mcp/
-│   │   │   └── kubernetes-config.json
-│   │   ├── hooks/
-│   │   │   ├── pre-deploy.js
-│   │   │   └── post-deploy.js
-│   │   ├── scripts/
-│   │   │   ├── deploy.sh
-│   │   │   ├── rollback.sh
-│   │   │   └── health-check.sh
-│   │   └── README.md
-│   ├── documentation/
-│   │   ├── .claude-plugin/
-│   │   │   └── plugin.json
-│   │   ├── commands/
-│   │   │   ├── generate-api-docs.md
-│   │   │   ├── generate-readme.md
-│   │   │   ├── sync-docs.md
-│   │   │   └── validate-docs.md
-│   │   ├── agents/
-│   │   │   ├── api-documenter.md
-│   │   │   ├── code-commentator.md
-│   │   │   └── example-generator.md
-│   │   ├── mcp/
-│   │   │   └── github-docs-config.json
-│   │   ├── templates/
-│   │   │   ├── api-endpoint.md
-│   │   │   ├── function-docs.md
-│   │   │   └── adr-template.md
-│   │   └── README.md
-│   └── README.md
-│
-├── 08-checkpoints/                              # Checkpoints
-│   ├── checkpoint-examples.md
-│   └── README.md
-│
-├── 09-advanced-features/                        # Advanced Features
-│   ├── config-examples.json
-│   ├── planning-mode-examples.md
-│   └── README.md
-│
-└── 10-cli/                                      # CLI Usage
-    └── README.md
-```
-
----
-
-## Quick Start by Use Case
-
-### Code Quality & Reviews
-```bash
-# Install slash command
-cp 01-slash-commands/optimize.md .claude/commands/
-
-# Install subagent
-cp 04-subagents/code-reviewer.md .claude/agents/
-
-# Install skill
-cp -r 03-skills/code-review-specialist ~/.claude/skills/
-
-# Or install complete plugin
-claude --plugin-dir ./07-plugins/pr-review
-```
-
-### DevOps & Deployment
-```bash
-# Install plugin (includes everything)
-claude --plugin-dir ./07-plugins/devops-automation
-```
-
-### Documentation
-```bash
-# Install slash command
-cp 01-slash-commands/generate-api-docs.md .claude/commands/
-
-# Install subagent
-cp 04-subagents/documentation-writer.md .claude/agents/
-
-# Install skill
-cp -r 03-skills/doc-generator ~/.claude/skills/
-
-# Or install complete plugin
-claude --plugin-dir ./07-plugins/documentation
-```
-
-### Team Standards
-```bash
-# Set up project memory
-cp 02-memory/project-CLAUDE.md ./CLAUDE.md
-
-# Edit to match your team's standards
-```
-
-### External Integrations
-```bash
-# Set environment variables
-export GITHUB_PERSONAL_ACCESS_TOKEN="your_token"
-export DATABASE_URL="postgresql://..."
-export SLACK_BOT_TOKEN="your-slack-bot-token"
-export SLACK_TEAM_ID="T0000000000"
-
-# Install MCP config (project scope)
-cp 05-mcp/multi-mcp.json .mcp.json
-```
-
-### Automation & Validation
-```bash
-# Install hooks
-mkdir -p ~/.claude/hooks
-cp 06-hooks/*.sh ~/.claude/hooks/
-chmod +x ~/.claude/hooks/*.sh
-
-# Configure hooks in settings (~/.claude/settings.json)
-# See 06-hooks/README.md
-```
-
-### Safe Experimentation
-```bash
-# Checkpoints are created automatically with every user prompt
-# To rewind: press Esc+Esc or use /rewind
-# Then choose what to restore from the rewind menu
-
-# See 08-checkpoints/README.md for examples
-```
-
-### Advanced Workflows
-```bash
-# Configure advanced features
-# See 09-advanced-features/config-examples.json
-
-# Use planning mode
-/plan Implement feature X
-
-# Use permission modes
-claude --permission-mode plan          # For code review (read-only)
-claude --permission-mode acceptEdits   # Auto-accept edits
-claude --permission-mode auto          # Auto-approve safe actions
-
-# Run in headless mode for CI/CD
-claude -p "Run tests and report results" --permission-mode auto
-
-# Run background tasks
-Run tests in background
-
-# See 09-advanced-features/README.md for complete guide
-```
-
----
-
-## Feature Coverage Matrix
-
-| Category | Commands | Agents | MCP | Hooks | Scripts | Templates | Docs | Images | Total |
-|----------|----------|--------|-----|-------|---------|-----------|------|--------|-------|
-| **01 Slash Commands** | 8 | - | - | - | - | - | 1 | 1 | **10** |
-| **02 Memory** | - | - | - | - | - | 3 | 1 | 2 | **6** |
-| **03 Skills** | - | - | - | - | 5 | 7 | 11 | - | **23** |
-| **04 Subagents** | - | 9 | - | - | - | - | 1 | - | **10** |
-| **05 MCP** | - | - | 4 | - | - | - | 1 | - | **5** |
-| **06 Hooks** | - | - | - | 11 | - | - | 1 | - | **12** |
-| **07 Plugins** | 11 | 9 | 3 | 3 | 3 | 3 | 7 | - | **39** |
-| **08 Checkpoints** | - | - | - | - | - | - | 1 | 1 | **2** |
-| **09 Advanced** | - | - | - | - | 1 | 1 | 2 | - | **4** |
-| **10 CLI** | - | - | - | - | - | - | 1 | - | **1** |
-
----
-
-## Learning Path
-
-### Beginner (Week 1)
-1. ✅ Read `README.md`
-2. ✅ Install 1-2 slash commands
-3. ✅ Create project memory file
-4. ✅ Try basic commands
-
-### Intermediate (Week 2-3)
-1. ✅ Set up GitHub MCP
-2. ✅ Install a subagent
-3. ✅ Try delegating tasks
-4. ✅ Install a skill
-
-### Advanced (Week 4+)
-1. ✅ Install complete plugin
-2. ✅ Create custom slash commands
-3. ✅ Create custom subagent
-4. ✅ Create custom skill
-5. ✅ Build your own plugin
-
-### Expert (Week 5+)
-1. ✅ Set up hooks for automation
-2. ✅ Use checkpoints for experimentation
-3. ✅ Configure planning mode
-4. ✅ Use permission modes effectively
-5. ✅ Set up headless mode for CI/CD
-6. ✅ Master session management
-
----
-
-## Search by Keyword
-
-### Performance
-- `01-slash-commands/optimize.md` - Performance analysis
-- `04-subagents/code-reviewer.md` - Performance review
-- `03-skills/code-review-specialist/` - Performance metrics
-- `07-plugins/pr-review/agents/performance-analyzer.md` - Performance specialist
-
-### Security
-- `04-subagents/secure-reviewer.md` - Security review
-- `03-skills/code-review-specialist/` - Security analysis
-- `07-plugins/pr-review/` - Security checks
-
-### Testing
-- `04-subagents/test-engineer.md` - Test engineer
-- `07-plugins/pr-review/commands/check-tests.md` - Test coverage
-
-### Documentation
-- `01-slash-commands/generate-api-docs.md` - API docs command
-- `04-subagents/documentation-writer.md` - Doc writer agent
-- `03-skills/doc-generator/` - Doc generator skill
-- `07-plugins/documentation/` - Complete doc plugin
-
-### Deployment
-- `07-plugins/devops-automation/` - Complete DevOps solution
-
-### Automation
-- `06-hooks/` - Event-driven automation
-- `06-hooks/pre-commit.sh` - Pre-commit automation
-- `06-hooks/format-code.sh` - Auto-formatting
-- `09-advanced-features/` - Headless mode for CI/CD
-
-### Validation
-- `06-hooks/security-scan.sh` - Security validation
-- `06-hooks/validate-prompt.sh` - Prompt validation
-
-### Experimentation
-- `08-checkpoints/` - Safe experimentation with rewind
-- `08-checkpoints/checkpoint-examples.md` - Real-world examples
-
-### Planning
-- `09-advanced-features/planning-mode-examples.md` - Planning mode examples
-- `09-advanced-features/README.md` - Extended thinking
-
-### Configuration
-- `09-advanced-features/config-examples.json` - Configuration examples
-
----
-
-## Notes
-
-- All examples are ready to use
-- Modify to fit your specific needs
-- Examples follow Claude Code best practices
-- Each category has its own README with detailed instructions
-- Scripts include proper error handling
-- Templates are customizable
-
----
-
-## Contributing
-
-Want to add more examples? Follow the structure:
-1. Create appropriate subdirectory
-2. Include README.md with usage
-3. Follow naming conventions
-4. Test thoroughly
-5. Update this index
-
----
-
-**Last Updated**: October 26, 2026
-**Claude Code Version**: 2.1.310
-**Sources**:
-- https://code.claude.com/docs/en/tools-reference#task-tool-availability
-- https://code.claude.com/docs/en/workflows#set-a-size-guideline
-- https://code.claude.com/docs/en/memory#agents-md
-- https://code.claude.com/docs/en/overview
-- https://code.claude.com/docs/en/hooks
-- https://code.claude.com/docs/en/commands
-- https://code.claude.com/docs/en/permission-modes
-- https://github.com/anthropics/claude-code/releases/tag/v2.1.153
-- https://github.com/anthropics/claude-code/releases/tag/v2.1.154
-- https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md
-- https://code.claude.com/docs/en/model-config
-- https://code.claude.com/docs/en/workflows#let-claude-decide-with-ultracode
-- https://code.claude.com/docs/en/cli-reference
-- https://code.claude.com/docs/en/plugins/install
-- https://code.claude.com/docs/en/checkpointing
-- https://code.claude.com/docs/en/remote-control
-- https://code.claude.com/docs/en/chrome
-- https://code.claude.com/docs/en/headless#auto-approve-tools
-- https://code.claude.com/docs/en/permission-modes#which-mode-a-non-interactive-run-starts-in
-- https://code.claude.com/docs/en/scheduled-tasks
-**Compatible Models**: Claude Fable 5, Claude Opus 5, Claude Sonnet 5, Claude Sonnet 4.6, Claude Opus 4.8, Claude Haiku 4.5
-**Total Examples**: 100+ files
-**Categories**: 10 features
-**Hooks**: 11 automation scripts
-**Configuration Examples**: 10+ scenarios
-**Ready to Use**: All examples
+**Last updated:** 2026-10-30
+**Checked against:** Kiro Crew public source @ 2808e9478c (github.com/kirodotdev/KiroCrew) and kiro.dev/docs/cli
+*Part of the [Kiro Crew How To](README.md) guide.*

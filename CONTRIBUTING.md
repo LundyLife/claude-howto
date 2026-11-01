@@ -1,76 +1,96 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-howto-logo-dark.svg">
-  <img alt="Claude How To" src="resources/logos/claude-howto-logo.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="resources/logos/kirocrew-howto-logo-dark.svg">
+  <img alt="Kiro Crew How To" src="resources/logos/kirocrew-howto-logo.svg">
 </picture>
 
-# Contributing to Claude How To
+# Contributing to Kiro Crew How To
 
-Thank you for your interest in contributing to this project! This guide will help you understand how to contribute effectively.
+Thank you for helping. This guide teaches Kiro Crew to people who have never used
+AI, so the bar is simple: **every step must be correct, and every step must be
+clear to a beginner.**
 
-## About This Project
+## About this project
 
-Claude How To is a visual, example-driven guide to Claude Code. We provide:
-- **Mermaid diagrams** explaining how features work
-- **Production-ready templates** you can use immediately
-- **Real-world examples** with context and best practices
-- **Progressive learning paths** from beginner to advanced
+Kiro Crew How To is a community tutorial for [Kiro Crew](https://github.com/kirodotdev/KiroCrew)
+and [kiro-cli](https://kiro.dev/docs/cli/). It is adapted from
+[claude-howto](https://github.com/luongnv89/claude-howto) by Luong Nguyen, under the
+MIT License. It is not an official Kiro product.
 
-## Types of Contributions
+The content is markdown in 24 numbered modules (`00-` to `23-`) and a capstone
+folder (`capstone-morning-desk/`). The scripts in `scripts/` only check the
+docs and build the website. The guide is English only.
 
-### 1. New Examples or Templates
-Add examples for existing features (slash commands, skills, hooks, etc.):
-- Copy-paste ready code
-- Clear explanations of how it works
-- Use cases and benefits
-- Troubleshooting tips
+## Ground rules
 
-### 2. Documentation Improvements
-- Clarify confusing sections
-- Fix typos and grammar
-- Add missing information
-- Improve code examples
+These apply to every change.
 
-### 3. Feature Guides
-Create guides for new Claude Code features:
-- Step-by-step tutorials
-- Architecture diagrams
-- Common patterns and anti-patterns
-- Real-world workflows
+1. **Verify before you write.** Every command, flag, setting key, path and button
+   label must exist in the public Kiro Crew source or the public kiro-cli docs.
+   Take dashboard labels from the English locale files in the Kiro Crew source
+   (`website/src/i18n/locales/`), and commands from `kirocrew <command> --help`.
+   If you cannot find it there, leave it out.
+2. **Do not test on a setup you depend on.** Try behavior in a throwaway Kiro Crew
+   home and a spare port, for example
+   `KIROCREW_HOME="$HOME/kc-test-home" KIROCREW_PORT=5599 kirocrew gateway`.
+   Never paste output from your own machine into the guide.
+3. **Write fresh examples.** Never copy example text from `--help` output. Use
+   neutral names such as `daily-status`, `reviewer`, `my-first-app` or `hello`.
+4. **Nothing private.** No company names, internal tools, hostnames, account IDs,
+   people's names, real tokens or your home path. Use `~/my-project`,
+   `you@example.com` and `example.com`.
+5. **Plain language.** Follow the [style guide](STYLE_GUIDE.md): short sentences,
+   define each term, show what the reader should see, and label every command,
+   key and setting with its surface (Dashboard, kiro-cli (terminal) or both).
+6. **Mark what is not yet tested.** If a step depends on behavior that has not
+   passed a live test on a release build, put an HTML comment on the line
+   directly above it: `<!-- NLT: <what must be confirmed> -->`. Remove the
+   comment once the test passes.
 
-### 4. Bug Reports
-Report issues you encounter:
-- Describe what you expected
-- Describe what actually happened
-- Include steps to reproduce
-- Add relevant Claude Code version and OS
+## Types of contributions
 
-### 5. Feedback and Suggestions
-Help improve the guide:
-- Suggest better explanations
-- Point out gaps in coverage
-- Recommend new sections or reorganization
+### 1. Fixes
 
-## Getting Started
+A wrong command, a step that no longer works, a broken link, a confusing
+sentence. These are the most valuable contributions. Say which Kiro Crew and
+kiro-cli versions you checked (`kirocrew --version`, `kiro-cli --version`).
 
-### 1. Fork and Clone
+### 2. New examples
+
+A saved prompt, steering file, skill, custom agent, connection config, hook or
+app that a beginner can copy and use. It must work on the default engine and be
+explained in the module's README.
+
+### 3. Better explanations
+
+A clearer sentence, a missing definition, a "You should see" block, a diagram.
+
+### 4. Bug reports and ideas
+
+Open an issue with the templates in `.github/ISSUE_TEMPLATE/`.
+
+## Getting started
+
+### 1. Fork and clone
+
+Fork the repository on GitHub, then clone your fork:
+
 ```bash
-git clone https://github.com/luongnv89/claude-howto.git
-cd claude-howto
+git clone https://github.com/<your-name>/kirocrew-howto.git
+cd kirocrew-howto
 ```
 
-### 2. Create a Branch
-Use a descriptive branch name:
+### 2. Create a branch
+
 ```bash
-git checkout -b add/feature-name
-git checkout -b fix/issue-description
-git checkout -b docs/improvement-area
+git checkout -b fix/memory-typo
 ```
 
-### 3. Set Up Your Environment
+Use a prefix that matches the change: `fix/`, `docs/`, `feat/`, `chore/`.
 
-Pre-commit hooks run the same checks as CI locally before every commit. All five checks must pass before a PR will be accepted.
+### 3. Set up your environment
 
-**Required dependencies:**
+Pre-commit hooks run the same checks as CI before every commit. All of them must
+pass before a pull request is accepted.
 
 ```bash
 # Python tooling (uv is the package manager for this project)
@@ -82,307 +102,213 @@ uv pip install -r scripts/requirements-dev.txt
 # Markdown linter (Node.js)
 npm install -g markdownlint-cli
 
-# Mermaid diagrams render with Pele, which needs Node.js >= 20 (nothing to
-# install globally). Check your version:
+# Mermaid diagrams render with Pele, which needs Node.js >= 20
 node --version
 
-# Install pre-commit and activate hooks
-uv pip install pre-commit
+# Turn on the pre-commit hooks
 pre-commit install
 ```
 
-**Verify your setup:**
+Check your setup:
 
 ```bash
 pre-commit run --all-files
 ```
 
-The first run downloads Node.js 22 for the Mermaid hooks (pre-commit provisions it, so they work even without a system Node.js) and the pinned Pele bundle into `scripts/.vendor-cache/pele/`; later runs work offline. The Mermaid hooks run in strict mode and fail if Pele cannot run. To commit offline before that first download, skip them with `SKIP=mermaid,vietnamese-mermaid,japanese-mermaid`.
-
-The hooks that run on every commit are:
+The first run downloads Node.js 22 for the Mermaid hook and the pinned Pele
+bundle into `scripts/.vendor-cache/pele/`; later runs work offline. To commit
+offline before that first download, skip the hook with `SKIP=mermaid`.
 
 | Hook | What it checks |
-|------|---------------|
+|---|---|
 | `markdown-lint` | Markdown formatting and structure |
-| `cross-references` | Relative links, anchors, code fences |
-| `mermaid-syntax` | All ` ```mermaid ` blocks parse correctly |
+| `cross-references` | Relative links, anchors and code fences |
+| `mermaid-syntax` | Every Mermaid block renders with Pele |
 | `link-check` | External URLs are reachable |
-| `build-epub` | EPUB generates without errors (on `.md` changes) |
+| `markdown-rendering` | Code spans, table pipes and fences render correctly |
 
-## Directory Structure
+## Directory structure
 
+```text
+├── 00-what-is-an-agent/          # 🟢 What an agent is, and why it can be wrong
+├── 01-getting-started/           # 🟢 Desktop app, sign in, first chat
+├── 02-approval-modes/            # 🟢 Normal, Reads, Trust, YOLO
+├── 03-sessions/                  # 🟢 Folders, Older Sessions, Side Chat
+├── 04-memory/                    # 🟢 Lessons and memory modes
+├── 05-fix-a-mistake/             # 🟢 Rewind the chat, restore files with git
+├── 06-prompts-and-steering/      # 🔵 Saved prompts and steering files
+├── 07-skills/                    # 🔵 Skills
+├── 08-knowledge-library/         # 🔵 Search your own documents
+├── 09-protect-secrets-and-files/ # 🔵 Vault, sandbox, git, deny list
+├── 10-connections/               # 🔵 MCP servers and services
+├── 11-browser/                   # 🔵 The Browser panel
+├── 12-scheduled-jobs/            # 🔵 Scheduled jobs
+├── 13-monitors/                  # 🔵 Monitors and notifications
+├── 14-phone-and-chat-apps/       # 🔵 Slack and your phone
+├── 15-parallel-helpers/          # 🟣 Helpers in parallel
+├── 16-task-runner/               # 🟣 Task files and unattended runs
+├── 17-workflows/                 # 🟣 Restartable workflows
+├── 18-artifacts/                 # 🟣 Artifacts and versions
+├── 19-mates-and-agents/          # 🟣 Mates (Feature Preview) and custom agents
+├── 20-hooks/                     # 🔴 Stop and PostToolUse hooks
+├── 21-webhooks/                  # 🔴 Webhooks (Feature Preview)
+├── 22-apps/                      # 🔴 Build an app
+├── 23-backup-and-hosting/        # 🔴 Snapshot, restore, second instance
+├── capstone-morning-desk/        # The capstone project
+├── .kiro/skills/                 # The lesson-quiz and self-assessment skills
+├── local-progress/               # A progress tracker page for the browser
+├── resources/                    # Logos and icons
+├── scripts/                      # Website builder, doc checkers, tests
+└── README.md                     # Start here
 ```
-├── 01-slash-commands/      # User-invoked shortcuts
-├── 02-memory/              # Persistent context examples
-├── 03-skills/              # Reusable capabilities
-├── 04-subagents/           # Specialized AI assistants
-├── 05-mcp/                 # Model Context Protocol examples
-├── 06-hooks/               # Event-driven automation
-├── 07-plugins/             # Bundled features
-├── 08-checkpoints/         # Session snapshots
-├── 09-advanced-features/   # Planning, thinking, backgrounds
-├── 10-cli/                 # CLI reference
-├── scripts/                # Build and utility scripts
-└── README.md               # Main guide
-```
 
-## How to Contribute Examples
+## How to add examples
 
-### Adding a Slash Command
-1. Create a `.md` file in `01-slash-commands/`
-2. Include:
-   - Clear description of what it does
-   - Use cases
-   - Installation instructions
-   - Usage examples
-   - Customization tips
-3. Update `01-slash-commands/README.md`
+### Adding a saved prompt
 
-### Adding a Skill
-1. Create a directory in `03-skills/`
-2. Include:
-   - `SKILL.md` - Main documentation
-   - `scripts/` - Helper scripts if needed
-   - `templates/` - Prompt templates
-   - Example usage in README
-3. Update `03-skills/README.md`
+1. Add `<name>.md` to `06-prompts-and-steering/prompts/`.
+2. Optional front matter: `description` only.
+3. Do not add a footer: the whole file is sent to the agent.
+4. List it in `06-prompts-and-steering/README.md`.
 
-### Adding a Subagent
-1. Create a `.md` file in `04-subagents/`
-2. Include:
-   - Agent purpose and capabilities
-   - System prompt structure
-   - Example use cases
-   - Integration examples
-3. Update `04-subagents/README.md`
+### Adding a steering example
 
-### Adding MCP Configuration
-1. Create a `.json` file in `05-mcp/`
-2. Include:
-   - Configuration explanation
-   - Required environment variables
-   - Setup instructions
-   - Usage examples
-3. Update `05-mcp/README.md`
+1. Add the file to `06-prompts-and-steering/steering/`.
+2. Start it with `inclusion: always` front matter, as in `dates.md`.
+3. Explain where the reader should copy it.
 
-### Adding a Hook
-1. Create a `.sh` file in `06-hooks/`
-2. Include:
-   - Shebang and description
-   - Clear comments explaining logic
-   - Error handling
-   - Security considerations
-3. Update `06-hooks/README.md`
+### Adding a skill
 
-## Writing Guidelines
+1. Make `07-skills/<name>/SKILL.md`.
+2. Front matter needs `name` (equal to the folder name) and `description` (what
+   and when).
+3. Do not rely on `triggers`.
+4. Add it to the skills table in `07-skills/README.md`.
 
-### Markdown Style
-- Use clear headings (H2 for sections, H3 for subsections)
-- Keep paragraphs short and focused
-- Use bullet points for lists
-- Include code blocks with language specification
-- Add blank lines between sections
+### Adding a custom agent
 
-### Code Examples
-- Make examples copy-paste ready
-- Comment non-obvious logic
-- Include both simple and advanced versions
-- Show real-world use cases
-- Highlight potential issues
+1. Add `19-mates-and-agents/agents/<name>.json` with `name`, `description`,
+   `prompt` and `tools`, as in `plain-writer.json`.
+2. Give it the fewest tools it needs.
+3. Explain it in `19-mates-and-agents/README.md`.
 
-### Documentation
-- Explain the "why" not just the "what"
-- Include prerequisites
-- Add troubleshooting sections
-- Link to related topics
-- Keep it beginner-friendly
+### Adding a connection config
 
-### JSON/YAML
-- Use proper indentation (2 or 4 spaces consistently)
-- Add comments explaining configuration
-- Include validation examples
+1. Add `10-connections/<name>-mcp.json` with an `mcpServers` block.
+2. Put secrets in `${ENV_VAR}` references, never in the file.
+3. Check that any npm package it uses exists and is not deprecated.
 
-### Diagrams
-- Use Mermaid when possible
-- Keep diagrams simple and readable
-- Include descriptions below diagrams
-- Link to relevant sections
+### Adding a hook
 
-## Commit Guidelines
+Hooks are easy to get wrong, so only these shapes are accepted:
 
-Follow conventional commit format:
-```
+- A `Stop` hook. If it prints `{"decision": "block", "reason": "..."}`, it
+  **must** have a loop guard, as in `20-hooks/stop-check-once.sh`.
+- A `UserPromptSubmit` hook whose output adds context to the turn.
+- A `PostToolUse` hook with an **empty matcher** that reads `tool_name` (the
+  call's title) and `tool_response`, or asks git what changed.
+
+<!-- NLT: confirm whether PreToolUse hooks ever fire on the default engine -->
+Do not add a hook that relies on `PreToolUse` blocking, a tool-name matcher,
+or `tool_input` in a `PostToolUse` hook. They do not work today, and a
+beginner would trust them. Safety belongs in
+[Module 9](09-protect-secrets-and-files/README.md). Never write an exercise
+that asks the agent to run a destructive command.
+
+### Adding an app
+
+1. Add a folder under `22-apps/` with an `app.json`, as in `habit-tracker/`.
+2. Keep it small: a page, a skill or a scheduled job a beginner can read.
+3. Explain it in `22-apps/README.md`.
+
+### Adding or moving a module
+
+Update `README.md`, `INDEX.md`, `LEARNING-ROADMAP.md`, `CATALOG.md`,
+`scripts/website_templates/roadmap.json`, `CHAPTER_ORDER` in
+`scripts/build_website.py`, and both skills in `.kiro/skills/`.
+
+## Writing guidelines
+
+See [STYLE_GUIDE.md](STYLE_GUIDE.md) for the full rules. In short:
+
+- Use the fixed module headings, in order.
+- Every code fence declares a language.
+- Relative links between files; descriptive text for external links.
+- Mermaid labels name real parts ("Agent", "Kiro Crew", "kiro-cli").
+- A feature behind a Feature Preview says so, and shows the switch in
+  **Settings → Developer → Feature Previews**.
+
+## Commit guidelines
+
+Follow [Conventional Commits](https://www.conventionalcommits.org/):
+
+```text
 type(scope): description
-
-[optional body]
 ```
-
-Types:
-- `feat`: New feature or example
-- `fix`: Bug fix or correction
-- `docs`: Documentation changes
-- `refactor`: Code restructuring
-- `style`: Formatting changes
-- `test`: Test additions or changes
-- `chore`: Build, dependencies, etc.
 
 Examples:
-```
-feat(slash-commands): Add API documentation generator
-docs(memory): Improve personal preferences example
-fix(README): Correct table of contents link
-docs(skills): Add comprehensive code review skill
+
+```text
+fix(memory): correct the lesson remove step
+docs(hooks): explain the loop guard in plainer words
+feat(skills): add a meeting-notes skill
+chore(scripts): update the website roadmap
 ```
 
-## Before Submitting
+## Before submitting
 
 ### Checklist
-- [ ] Code follows project style and conventions
-- [ ] New examples include clear documentation
-- [ ] README files are updated (both local and root)
-- [ ] No sensitive information (API keys, credentials)
-- [ ] Examples are tested and working
-- [ ] Links are verified and correct
-- [ ] Files have proper permissions (scripts are executable)
-- [ ] Commit message is clear and descriptive
 
-### Local Testing
+- [ ] Every command, flag, key and label is verified against public sources.
+- [ ] No `--help` example text and no real output were copied.
+- [ ] Nothing private or secret is in the change.
+- [ ] Commands, keys and settings carry surface labels.
+- [ ] Untested claims have an `<!-- NLT: ... -->` comment above them.
+- [ ] New terms are in the module's `## Words to know` and in `GLOSSARY.md`.
+- [ ] Scripts you added are executable.
+- [ ] `pre-commit run --all-files` passes.
+- [ ] `pytest scripts/tests/ -v` passes if you touched `scripts/`.
+
+### Local testing
+
 ```bash
-# Run all pre-commit checks (same checks as CI)
 pre-commit run --all-files
-
-# Review your changes
+pytest scripts/tests/ -v
 git diff
 ```
 
-## Pull Request Process
+## Pull request process
 
-1. **Create PR with clear description**:
-   - What does this add/fix?
-   - Why is it needed?
-   - Related issues (if any)
+1. Describe what the change fixes or adds, and why.
+2. Say which `kirocrew --version` and `kiro-cli --version` you checked against.
+3. Link related issues with `Closes #123`.
+4. Expect review comments. Accuracy and clarity come first.
 
-2. **Include relevant details**:
-   - New feature? Include use cases
-   - Documentation? Explain improvements
-   - Examples? Show before/after
+## Reporting issues
 
-3. **Link to issues**:
-   - Use `Closes #123` to auto-close related issues
-
-4. **Be patient with reviews**:
-   - Maintainers may suggest improvements
-   - Iterate based on feedback
-   - Final decision rests with maintainers
-
-## Code Review Process
-
-Reviewers will check:
-- **Accuracy**: Does it work as described?
-- **Quality**: Is it production-ready?
-- **Consistency**: Does it follow project patterns?
-- **Documentation**: Is it clear and complete?
-- **Security**: Are there any vulnerabilities?
-
-## Reporting Issues
-
-### Bug Reports
-Include:
-- Claude Code version
-- Operating system
-- Steps to reproduce
-- Expected behavior
-- Actual behavior
-- Screenshots if applicable
-
-### Feature Requests
-Include:
-- Use case or problem being solved
-- Proposed solution
-- Alternatives you've considered
-- Additional context
-
-### Documentation Issues
-Include:
-- What's confusing or missing
-- Suggested improvements
-- Examples or references
-
-## Project Policies
-
-### Sensitive Information
-- Never commit API keys, tokens, or credentials
-- Use placeholder values in examples
-- Include `.env.example` for configuration files
-- Document required environment variables
-
-### Code Quality
-- Keep examples focused and readable
-- Avoid over-engineering solutions
-- Include comments for non-obvious logic
-- Test thoroughly before submitting
-
-### Intellectual Property
-- Original content owned by author
-- Project uses educational license
-- Respect existing copyrights
-- Provide attribution where needed
-
-## Getting Help
-
-- **Questions**: Open a discussion in GitHub Issues
-- **General Help**: Check existing documentation
-- **Development Help**: Review similar examples
-- **Code Review**: Tag maintainers in PRs
-
-## Recognition
-
-Contributors are recognized in:
-- README.md Contributors section
-- GitHub contributors page
-- Commit history
+- **Bug reports:** the module and step, what you typed, what you expected, what
+  happened, and your `kirocrew --version` and `kiro-cli --version`. Remove any
+  tokens or private paths from what you paste.
+- **Feature requests:** what you want to learn, and who it would help.
+- **Documentation issues:** the file and section, and what was unclear.
 
 ## Security
 
-When contributing examples and documentation, please follow secure coding practices:
+Do not report security problems in a public issue. See [SECURITY.md](SECURITY.md).
+Problems in Kiro Crew itself belong to the
+[Kiro Crew project](https://github.com/kirodotdev/KiroCrew), not here.
 
-- **Never hardcode secrets or API keys** - Use environment variables
-- **Warn about security implications** - Highlight potential risks
-- **Use secure defaults** - Enable security features by default
-- **Validate inputs** - Show proper input validation and sanitization
-- **Include security notes** - Document security considerations
+## Code of conduct
 
-For security issues, see [SECURITY.md](SECURITY.md) for our vulnerability reporting process.
-
-## Code of Conduct
-
-We are committed to providing a welcoming and inclusive community. Please read [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for our full community standards.
-
-In brief:
-- Be respectful and inclusive
-- Welcome feedback gracefully
-- Help others learn and grow
-- Avoid harassment or discrimination
-- Report issues to maintainers
-
-All contributors are expected to uphold this code and treat each other with kindness and respect.
+This project follows the [Code of Conduct](CODE_OF_CONDUCT.md). Be kind and
+assume good intent.
 
 ## License
 
-By contributing to this project, you agree that your contributions will be licensed under the MIT License. See [LICENSE](LICENSE) file for details.
-
-## Questions?
-
-- Check the [README](README.md)
-- Review [LEARNING-ROADMAP.md](LEARNING-ROADMAP.md)
-- Look at existing examples
-- Open an issue for discussion
-
-Thank you for contributing! 🙏
+By contributing, you agree that your contributions are licensed under the
+[MIT License](LICENSE).
 
 ---
-**Last Updated**: August 4, 2026
-**Claude Code Version**: 2.1.220
-**Sources**:
-- https://code.claude.com/docs/en/overview
-**Compatible Models**: Claude Fable 5, Claude Opus 5, Claude Sonnet 5, Claude Sonnet 4.6, Claude Opus 4.8, Claude Haiku 4.5
+**Last updated:** 2026-10-30
+**Checked against:** Kiro Crew public source @ 2808e9478c (github.com/kirodotdev/KiroCrew) and kiro.dev/docs/cli
+*Part of the [Kiro Crew How To](README.md) guide.*

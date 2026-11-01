@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "database": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@bytebase/dbhub",
+        "--transport",
+        "stdio"
+      ],
+      "env": {
+        "DSN": "${DATABASE_URL}"
+      }
+    }
+  }
+}

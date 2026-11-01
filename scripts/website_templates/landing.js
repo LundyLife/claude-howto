@@ -1,4 +1,4 @@
-/* claude-howto landing — progress tracking, terminal, scroll effects.
+/* kirocrew-howto landing — progress tracking, terminal, scroll effects.
    Vanilla JS, no dependencies. The page is fully usable without it:
    every lesson link navigates, and interactive controls are hidden via
    the `no-js` class on <html>. */
@@ -9,7 +9,7 @@
   root.classList.remove("no-js");
   root.classList.add("js");
 
-  var STORAGE_KEY = "claude-howto.progress.v1";
+  var STORAGE_KEY = "kirocrew-howto.progress.v1";
   var VALID_STATUS = { "not-started": true, "in-progress": true, "done": true };
   var STATUS_LABEL = {
     "not-started": "Not started",
@@ -31,7 +31,7 @@
      The pre-paint inline script already applied the initial theme; this
      wires the toggle and follows the OS scheme while nothing is saved. */
 
-  var THEME_KEY = "claude-howto-theme";
+  var THEME_KEY = "kirocrew-howto-theme";
   var themeToggle = document.getElementById("theme-toggle");
 
   function currentTheme() {

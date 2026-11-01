@@ -2,7 +2,7 @@
 
 ## Overview
 
-The security of the Claude How To project is important to us. This document outlines our security practices and describes how to report security vulnerabilities responsibly.
+The security of the Kiro Crew How To project is important to us. This document outlines our security practices and describes how to report security vulnerabilities responsibly.
 
 ## Supported Versions
 
@@ -88,7 +88,7 @@ We appreciate reports on:
 ### Security Issues Out of Scope
 
 These are outside the scope of this project:
-- Vulnerabilities in Claude Code itself (report to Anthropic)
+- Vulnerabilities in Kiro Crew or kiro-cli themselves (report them to the [Kiro Crew project](https://github.com/kirodotdev/KiroCrew))
 - Issues with external services or libraries (report to upstream)
 - Social engineering or user education (not applicable to this guide)
 - Theoretical vulnerabilities without proof of concept
@@ -100,7 +100,7 @@ These are outside the scope of this project:
 
 **For sensitive security issues, please use GitHub's private vulnerability reporting:**
 
-1. Visit: https://github.com/luongnv89/claude-howto/security/advisories
+1. Visit: https://github.com/LundyLife/kirocrew-howto/security/advisories
 2. Click "Report a vulnerability"
 3. Fill in the vulnerability details
 4. Include:
@@ -298,12 +298,11 @@ pip-audit
 - [GitHub Security Alerts](https://docs.github.com/en/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)
 
 ### General Security
-- [Anthropic Security](https://www.anthropic.com/)
 - [GitHub Security Best Practices](https://docs.github.com/en/code-security)
 
 ## Security Advisories Archive
 
-Past security advisories are available in the [GitHub Security Advisories](https://github.com/luongnv89/claude-howto/security/advisories) tab.
+Past security advisories are available in the [GitHub Security Advisories](https://github.com/LundyLife/kirocrew-howto/security/advisories) tab.
 
 ## Contact
 
@@ -325,13 +324,10 @@ This security policy is reviewed and updated:
 - When the project scope changes
 - Annually as a minimum
 
-**Last Updated**: August 25, 2026
-**Claude Code Version**: 2.1.245
-**Sources**:
-- https://code.claude.com/docs/en/overview
-**Compatible Models**: Claude Fable 5, Claude Opus 5, Claude Sonnet 5, Claude Sonnet 4.6, Claude Opus 4.8, Claude Haiku 4.5
-**Next Review**: April 2027
+**Next review:** 2027-10
 
----
+**Last updated:** 2026-10-30
+**Checked against:** Kiro Crew public source @ 2808e9478c (github.com/kirodotdev/KiroCrew) and kiro.dev/docs/cli
+*Part of the [Kiro Crew How To](README.md) guide.*
 
-Thank you for helping keep Claude How To secure! 🔒
+Thank you for helping keep Kiro Crew How To secure!

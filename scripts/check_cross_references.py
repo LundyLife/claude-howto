@@ -28,7 +28,7 @@ def iter_md_files():
 
 def heading_to_anchor(heading: str) -> str:
     # Match GitHub's anchor generation: strip emoji and special punctuation,
-    # keep Unicode letters (including Vietnamese diacritics), lowercase,
+    # keep Unicode letters (including diacritics), lowercase,
     # replace spaces with hyphens, strip leading/trailing hyphens.
     # 1. Remove emoji (characters outside BMP or in known emoji ranges)
     heading = re.sub(
@@ -74,6 +74,9 @@ def main() -> int:
 
         # Relative .md links must resolve and must stay within the repo root
         for link_path in re.findall(r"\[[^\]]+\]\(([^)#]+\.md)[^)]*\)", scannable):
+            # Absolute URLs (https://...) are external; check_links.py covers them.
+            if "://" in link_path:
+                continue
             resolved = (file_path.parent / link_path).resolve()
             if not resolved.is_relative_to(repo_root):
                 continue

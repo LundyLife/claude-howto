@@ -7,11 +7,10 @@
 # raw `</...>` inside code spans (e.g. `read -r INPUT </dev/tty`) and silently
 # truncates the rendered page.
 """
-Build a static website from the Claude How-To markdown files.
+Build a static website from the Kiro Crew How-To markdown files.
 
 Usage:
     uv run scripts/build_website.py
-    uv run scripts/build_website.py --lang vi
     uv run scripts/build_website.py --output site/ --verbose
 
 The website renders the existing markdown files as the single source of truth.
@@ -23,7 +22,7 @@ Output:
     per markdown source plus `assets/` with logos and copied images.
 
 Features:
-    - Renders the same chapter order as the EPUB build (curriculum order).
+    - Renders the chapters in curriculum order (``CHAPTER_ORDER``).
     - Rewrites internal `.md` links to corresponding HTML pages on the site.
     - Rewrites repo-file/folder references (`.json`, `.sh`, `.py`, etc.) to
       GitHub source URLs so users can jump to the source on github.com.
@@ -68,7 +67,7 @@ from vendor_assets import (
 # Configuration
 # =============================================================================
 
-REPO_URL = "https://github.com/luongnv89/claude-howto"
+REPO_URL = "https://github.com/LundyLife/kirocrew-howto"
 DEFAULT_BRANCH = "main"
 
 # Files/dirs that exist in the repo but should not appear on the site.
@@ -94,39 +93,53 @@ EXCLUDE_DIRS = {
     ".asm-improver",
     ".codex",
     ".opencode",
-    ".claude",
+    ".kiro",
     "site",
     "scripts",
-    "vi",
-    "zh",
-    "ja",
-    "uk",
 }
 
 # Top-level markdown files that should not be rendered as standalone pages.
 EXCLUDE_TOP_LEVEL = {
-    "CLAUDE.md",
+    "AGENTS.md",
     "README.backup.md",
 }
 
 EXCLUDE_TOP_LEVEL_PREFIXES = ("update-plan",)
 
-# Match the EPUB chapter ordering.
+# The curriculum order: top-level guides, Modules 0-23, the capstone, then
+# reference pages.
 CHAPTER_ORDER: list[tuple[str, str]] = [
     ("README.md", "Introduction"),
     ("LEARNING-ROADMAP.md", "Learning Roadmap"),
     ("QUICK_REFERENCE.md", "Quick Reference"),
-    ("claude_concepts_guide.md", "Claude Concepts Guide"),
-    ("01-slash-commands", "Slash Commands"),
-    ("02-memory", "Memory"),
-    ("03-skills", "Skills"),
-    ("04-subagents", "Subagents"),
-    ("05-mcp", "MCP Protocol"),
-    ("06-hooks", "Hooks"),
-    ("07-plugins", "Plugins"),
-    ("08-checkpoints", "Checkpoints"),
-    ("09-advanced-features", "Advanced Features"),
-    ("10-cli", "CLI Reference"),
+    ("kirocrew_concepts_guide.md", "Kiro Crew Concepts Guide"),
+    ("COMING_FROM_CLAUDE_CODE.md", "Coming from Claude Code"),
+    ("00-what-is-an-agent", "What Is an AI Agent?"),
+    ("01-getting-started", "Get It Running"),
+    ("02-approval-modes", "How Often It Asks First"),
+    ("03-sessions", "Tidy Chats"),
+    ("04-memory", "Remember Me, or Not"),
+    ("05-fix-a-mistake", "Fix a Mistake"),
+    ("06-prompts-and-steering", "Rules and Prompts"),
+    ("07-skills", "Skills"),
+    ("08-knowledge-library", "Your Documents"),
+    ("09-protect-secrets-and-files", "Protect Secrets and Files"),
+    ("10-connections", "Connect Your Tools"),
+    ("11-browser", "Use a Website"),
+    ("12-scheduled-jobs", "Daily Summary"),
+    ("13-monitors", "Tell Me When It Changes"),
+    ("14-phone-and-chat-apps", "Phone and Chat Apps"),
+    ("15-parallel-helpers", "Many Tasks at Once"),
+    ("16-task-runner", "Work While Away"),
+    ("17-workflows", "Restartable Long Jobs"),
+    ("18-artifacts", "Keep What It Made"),
+    ("19-mates-and-agents", "Named Specialists"),
+    ("20-hooks", "Hooks"),
+    ("21-webhooks", "Webhooks"),
+    ("22-apps", "Build an App"),
+    ("23-backup-and-hosting", "Back Up, Move, Host"),
+    ("capstone-morning-desk", "Capstone: My Morning Desk"),
+    ("GLOSSARY.md", "Glossary"),
     ("CATALOG.md", "Feature Catalog"),
     ("INDEX.md", "Index"),
     ("STYLE_GUIDE.md", "Style Guide"),
@@ -142,8 +155,8 @@ class WebsiteConfig:
     output_path: Path
     repo_url: str = REPO_URL
     branch: str = DEFAULT_BRANCH
-    site_title: str = "Claude Code How-To Guide"
-    site_subtitle: str = "Master Claude Code in a Weekend"
+    site_title: str = "Kiro Crew How-To Guide"
+    site_subtitle: str = "Learn Kiro Crew from zero"
     language: str = "en"
     landing: bool = False  # render the marketing landing page as index.html
     roadmap_path: Path | None = None  # defaults to website_templates/roadmap.json
@@ -155,7 +168,7 @@ class PageInfo:
 
     source: Path  # absolute path to the markdown source
     rel_source: str  # path relative to repo root (POSIX style)
-    output_url: str  # site-relative URL, e.g. `01-slash-commands/index.html`
+    output_url: str  # site-relative URL, e.g. `01-getting-started/index.html`
     title: str
     section: str  # the chapter group name (e.g. "Slash Commands")
     is_section_index: bool = False
@@ -274,7 +287,7 @@ def derive_page_title(md_path: Path, default: str) -> str:
 
 
 def source_to_site_url(rel_source: str) -> str:
-    """Map `01-slash-commands/README.md` → `01-slash-commands/index.html`."""
+    """Map `01-getting-started/README.md` → `01-getting-started/index.html`."""
     if rel_source == "README.md":
         return "index.html"
     if rel_source.endswith("/README.md"):
@@ -635,7 +648,7 @@ def render_markdown_to_soup(md_content: str) -> BeautifulSoup:
 
 
 def render_markdown(md_content: str) -> str:
-    """Convert markdown to HTML using the same extensions as the EPUB build."""
+    """Convert markdown to HTML with the site's markdown extensions."""
     return str(render_markdown_to_soup(md_content))
 
 
@@ -941,8 +954,8 @@ def render_landing(
 ) -> None:
     """Render the marketing landing page as `index.html`.
 
-    The landing is generated only for the English build — translated sites
-    keep their README at index.html because their heading anchors differ.
+    The landing is generated when `config.landing` is true (the default build);
+    with it off, the README stays at index.html.
     """
     template_dir = Path(__file__).parent / "website_templates"
     roadmap_path = config.roadmap_path or (template_dir / "roadmap.json")
@@ -1073,7 +1086,7 @@ def build_website(
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Build a static website from Claude How-To markdown files."
+        description="Build a static website from Kiro Crew How-To markdown files."
     )
     parser.add_argument(
         "--root",
@@ -1088,13 +1101,6 @@ def main() -> int:
         type=Path,
         default=None,
         help="Output directory for the generated site (default: <repo>/site)",
-    )
-    parser.add_argument(
-        "--lang",
-        type=str,
-        default="en",
-        choices=["en", "vi", "zh", "ja", "uk"],
-        help="Language code for the source tree (default: en — root markdown)",
     )
     parser.add_argument(
         "--repo-url",
@@ -1116,16 +1122,10 @@ def main() -> int:
 
     repo_root = (args.root or Path(__file__).parent.parent).resolve()
 
-    lang_root_map = {
-        "en": repo_root,
-        "vi": repo_root / "vi",
-        "zh": repo_root / "zh",
-        "ja": repo_root / "ja",
-        "uk": repo_root / "uk",
-    }
-    source_root = lang_root_map[args.lang].resolve()
+    # The guide is English only; the source tree is the repo root.
+    source_root = repo_root
 
-    default_output = repo_root / ("site" if args.lang == "en" else f"site-{args.lang}")
+    default_output = repo_root / "site"
     output_path = (args.output or default_output).resolve()
 
     logger = setup_logging(args.verbose)
@@ -1134,8 +1134,8 @@ def main() -> int:
         output_path=output_path,
         repo_url=args.repo_url,
         branch=args.branch,
-        language=args.lang,
-        landing=(args.lang == "en"),
+        language="en",
+        landing=True,
     )
 
     try:
